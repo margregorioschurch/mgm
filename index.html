@@ -688,7 +688,7 @@
             <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
                 <h5 class="ff-secondary text-primary fw-normal text-center py-5">For Prayers</h5>
                 <!-- <h1 class="text-white mb-4">please fill the form</h1> -->
-                <form class="form-wrap" id="myform1" action="mail.php" method="post">
+                <form class="form-wrap" action="https://formsubmit.co/margregorioschurch71@gmail.com" method="POST">
                     <div class="row g-3">
                         <div class="col-md-6">
                             <div class="form-floating">
@@ -704,7 +704,7 @@
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="Special Request" id="message" name="message" style="height: 100px" required></textarea>
+                                <textarea type="text" class="form-control" placeholder="Special Request" id="message" name="message" style="height: 100px" required></textarea>
                                 <label for="message">Type your message..</label>
                             </div>
                         </div>
@@ -784,8 +784,12 @@
             </div>
         </div>
         <!-- Footer End -->
-
-
+	<!--Counter-->
+         <div class="counter">
+            	<div class="head"><span class="fa fa-github">travel_explore</span>&nbsp;Visitors Counter</div>
+		<div class="count" id="CounterVisitor">0</div>
+	 </div>
+	 <!--END Counter-->
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
@@ -806,6 +810,7 @@
     <script src="js/main.js"></script>
     <script src="js/calendar.js"></script>
     <script src="js/readings.js"></script>
+    <script src="js/visitors.js"></script>
     <script>
         $("#submitForm").click(function() {
            alert("Connecting..");
