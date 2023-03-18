@@ -295,14 +295,23 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     max-width: 1100px;
     margin: 40px auto;
 }
+
 #calendar h2 {
-    color: #FEA116;
+    color: #fea116;
     font-size: 1.3rem;
     text-align: center;
-} 
+    text-shadow: 0.5px 0.5px 0px #2c3e508a;
+}
+
 #calendar a {
     color:#bc451d;
 }
+
+#calendar button {
+    font-size:x-small !important;
+    color:#3788d8 !important;
+}
+
 #btn-center{
     position: relative;
     margin-left: auto;
@@ -311,9 +320,9 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 
 .grid-box-sc{
     width: 100%;
-    height: 570px;
+    height: 680px !important;
     overflow-y: scroll;
-    border: 2px solid #f1f1f1;
+    border: 3px solid #f1f1f1;
 }
 .grid-box-sc h3 {
     color: brown;
