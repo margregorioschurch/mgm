@@ -308,7 +308,6 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 }
 
 #calendar button {
-    font-size:x-small !important;
     color:#3788d8 !important;
 }
 
@@ -626,6 +625,10 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
         transform: translate(40px,0px);
         max-width: 255px;
         max-height: 485px;
+    }
+    #calendar button {
+    font-size:x-small !important;
+    color:#3788d8 !important;
     }
 }
 /* @media screen and (min-width:325px) {
