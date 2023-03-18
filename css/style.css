@@ -304,10 +304,11 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 }
 
 #calendar a {
-    color:#bc451d;
+    color:#bc451d !important;
 }
 
 #calendar button {
+    transition: all ease-in 0.3s;
     color:#3788d8 !important;
 }
 
@@ -628,7 +629,13 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     }
     #calendar button {
     font-size:x-small !important;
-    color:#3788d8 !important;
+    color:#ffffff !important;
+    }
+    #calendar h2 {
+    color: #fea116;
+    font-size: 1rem;
+    text-align: center;
+    text-shadow: 0.5px 0.5px 0px #2c3e508a;
     }
 }
 /* @media screen and (min-width:325px) {
