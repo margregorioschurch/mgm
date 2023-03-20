@@ -1,6 +1,4 @@
 # mgm
-demo website : https://margregorioschurch.github.io/mgm/
-
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
 <!--
@@ -10,8 +8,6 @@ demo website : https://margregorioschurch.github.io/mgm/
 *** Don't forget to give the project a star!
 *** Thanks again! Now go create something AMAZING! :D
 -->
-
-
 
 <!-- PROJECT SHIELDS -->
 <!--
@@ -34,7 +30,7 @@ demo website : https://margregorioschurch.github.io/mgm/
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://raw.githubusercontent.com/margregorioschurch/mgm/master/img/logo/oie_qTSaQBp0mY24%20(2).png" alt="Logo" width="300" height="80">
+    <img src="https://raw.githubusercontent.com/margregorioschurch/mgm/master/img/logo/oie_qTSaQBp0mY24%20(2).png" alt="Logo" width="330" height="80">
   </a>
 
   <h3 align="center">Mar.Gregorios Church Unofficial Website Template</h3>
