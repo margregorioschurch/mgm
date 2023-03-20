@@ -7,14 +7,16 @@
     --dark: #0F172B;
     --menu: #000000d1;
     --verse: #590f38;
+    --brown: #bc451d;
+    --black: #202020;
 }
 body {
     margin:0;
     font-family:"Open Sans",sans-serif;
-    font-size:1.1rem;
+    font-size:1.05rem;
     font-weight:400;
-    line-height:1.5;
-    color:#666565;
+    line-height:1.4;
+    color: var(--black) !important;
     background-color:#ffffff;
     -webkit-text-size-adjust:100%;
     -webkit-tap-highlight-color:rgba(0,0,0,0)
@@ -26,7 +28,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     font-family:"Alegreya Sans SC",sans-serif;
     font-weight:800;
     line-height:1.2;
-    color:#0F172B
+    color: var(--brown) !important
 }
 .text-justify{
     text-align: justify;
@@ -270,10 +272,11 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 
 .service-item:hover {
     background: var(--primary);
+    color: var(--black) !important
 }
 
 .service-item * {
-    transition: .5s;
+    transition:ease-in .3s;
 }
 
 .service-item:hover * {
@@ -647,7 +650,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
   text-shadow: 1px 1px 10px black;
   text-align: center;
   color:#fff;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .counter {
