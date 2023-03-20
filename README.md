@@ -34,15 +34,15 @@ demo website : https://margregorioschurch.github.io/mgm/
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://raw.githubusercontent.com/margregorioschurch/mgm/master/img/logo/oie_qTSaQBp0mY24%20(2).png" alt="Logo" width="200" height="80">
+    <img src="https://raw.githubusercontent.com/margregorioschurch/mgm/master/img/logo/oie_qTSaQBp0mY24%20(2).png" alt="Logo" width="300" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Mar.Gregorios Church Unofficial Website Template</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    An awesome open-source template to jumpstart your project!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://margregorioschurch.github.io/mgm/"><strong>Visit Website »</strong></a>
     <br />
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
