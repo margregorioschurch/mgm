@@ -267,11 +267,11 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 /*** Service ***/
 .service-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
-    transition: .5s;
+    transition:ease-in .3s;
 }
 
 .service-item:hover {
-    background: var(--brown);
+    background: var(--primary) !important;
 }
 
 .service-item * {
@@ -279,7 +279,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 }
 
 .service-item:hover * {
-    color: var(--light) !important;
+    color: var(--brown) !important;
 }
 
 
