@@ -744,3 +744,12 @@ table tr td button {
     padding: 4px 5px 4px 5px;
     font-family: "Open Sans",sans-serif;
 }
+@media screen and (max-width:992px) {
+    #google_translate_element{
+    text-align: center;
+    padding: 0px;
+    position: relative;
+    bottom: 35px;
+    width: 100%;
+    height: auto;
+    }}
