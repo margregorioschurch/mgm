@@ -729,4 +729,17 @@ table tr td button {
     cursor: pointer;
 }
 .completed{text-decoration: line-through;}
-#visitor-globe{color:#0d6efd; 0 0 1px black;}
+#visitor-globe{color:#0d6efd; text-shadow:0 0 1px black;}
+#google_translate_element{
+    text-align: right;
+    padding-right: 8px;
+    position: relative;
+    bottom: 135px;
+    width: 100%;
+    height: auto;
+}
+.goog-te-gadget .goog-te-combo{
+    margin: 4px 0;
+    padding: 4px 5px 4px 5px;
+    font-family: "Open Sans",sans-serif;
+}

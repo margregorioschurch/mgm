@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
       events: [
         {
           title: 'New Year (First Sunday after Christmas)',
+          url: 'https://malankaralibrary.com/book/details/2161/Malankara_Orthodox_Syrian_Church_Liturgical_Calendar_2023',
           start: '2023-01-01',
           end: '2023-01-01'
         },
