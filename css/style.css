@@ -729,4 +729,4 @@ table tr td button {
     cursor: pointer;
 }
 .completed{text-decoration: line-through;}
-#visitor-globe{color:#0d6efd;}
+#visitor-globe{color:#0d6efd; 0 0 1px black;}
