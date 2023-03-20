@@ -34,7 +34,7 @@ demo website : https://margregorioschurch.github.io/mgm/
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://raw.githubusercontent.com/margregorioschurch/mgm/master/img/logo/oie_qTSaQBp0mY24%20(2).png" alt="Logo" width="80" height="80">
+    <img src="https://raw.githubusercontent.com/margregorioschurch/mgm/master/img/logo/oie_qTSaQBp0mY24%20(2).png" alt="Logo" width="200" height="80">
   </a>
 
   <h3 align="center">Best-README-Template</h3>
