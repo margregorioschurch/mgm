@@ -10,6 +10,11 @@
     --brown: #bc451d;
     --black: #202020;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     margin:0;
     font-family:"Open Sans",sans-serif;
