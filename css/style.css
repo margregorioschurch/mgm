@@ -338,10 +338,10 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     transform: translateX(100%);
     -moz-animation: scroll-left 2s linear infinite !important;
     -webkit-animation: scroll-left 2s linear infinite !important;
-    animation: scroll-left 20s linear infinite !important;
+    animation: scroll-left 15s linear infinite !important;
     overflow: visible !important;
 }
-.fc-h-event .fc-event-title-container {
+#calendar .fc-h-event .fc-event-main {
     overflow-x:auto !important;
 }
 
