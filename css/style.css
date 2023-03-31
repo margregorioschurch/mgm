@@ -338,11 +338,11 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     transform: translateX(100%);
     -moz-animation: scroll-left 2s linear infinite !important;
     -webkit-animation: scroll-left 2s linear infinite !important;
-    animation: scroll-left 15s linear infinite !important;
+    animation: scroll-left 18s linear infinite !important;
     overflow: visible !important;
 }
 #calendar .fc-h-event .fc-event-main-frame {
-    overflow-x:auto !important;
+    overflow-x:scroll !important;
 }
 
 @-moz-keyframes scroll-left {
