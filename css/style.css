@@ -330,6 +330,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     width: 100%;
     height: 100%;
     margin: 0;
+    font-weight: 700;
     line-height: 25px;
     text-align: center;
     -moz-transform: translateX(100%);
@@ -338,6 +339,10 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     -moz-animation: scroll-left 2s linear infinite !important;
     -webkit-animation: scroll-left 2s linear infinite !important;
     animation: scroll-left 20s linear infinite !important;
+    overflow: visible !important;
+}
+.fc-h-event .fc-event-title-container {
+    overflow-x:auto !important;
 }
 
 @-moz-keyframes scroll-left {
