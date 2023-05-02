@@ -673,6 +673,14 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
   background: radial-gradient(circle, #333333, #2e2e2e) !important;
   z-index: 999;
 }
+.counterimg {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    display: block;
+    padding-bottom: 5px;
+}
 /*counter-css*/
 
 @media screen and (max-width:305px) {
