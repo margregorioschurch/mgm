@@ -170,7 +170,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     .sticky-top.navbar-dark .navbar-nav .nav-link {
         padding: 10px 10px;
         margin-left: 0;
-        border: 1px solid #292929;
+        border: 1px solid transparent;
     }
 
     .navbar-dark .navbar-brand img {
