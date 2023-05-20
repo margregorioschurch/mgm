@@ -581,11 +581,17 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     border-color: var(--primary);
 }
 .bg-dark-1 {
-    url(./img/abstract-png-9096.webp);
+    background: url(../img/abstract-png-9096.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
-.bg-dark {
-    url(./img/abstract-png-9096.webp);
+.bg-dark-2 {
+    background: url(../img/calvary-mountain-sunset-background-vector.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .py-6{
