@@ -200,7 +200,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 
 /*** Hero Header ***/
 .hero-header {
-    background: linear-gradient(rgb(112 127 135 / 80%),rgb(120 59 12 / 80%)), url(../img/2018-05-04.jpg);
+    background: linear-gradient(rgb(120 59 12 / 80%), rgb(112 127 135 / 80%)), url(../img/2018-05-04.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
