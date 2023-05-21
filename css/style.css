@@ -6,7 +6,7 @@
     --light: #F1F8FF;
     --dark: #0F172B;
     --menu: #000000d1;
-    --verse: #590f38;
+    --verse: #ffffff;
     --brown: #bc451d;
     --black: #202020;
 }
@@ -556,12 +556,16 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item {
-    background: var(--primary) !important;
+    background: url(../img/calvary-mountain-sunset-background-vector.webp) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: inherit;
     border-color: var(--primary) !important;
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item * {
     color: var(--verse) !important;
+    text-shadow: 0px 0px 10px #00000021;
 }
 
 .testimonial-carousel .owl-dots {
