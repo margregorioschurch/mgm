@@ -495,7 +495,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 }
 
 #namespace-shadow{
-    text-shadow: 2px 2px 2px rgb(112, 127, 135);
+    text-shadow: 2px 2px 3px rgb(255 255 255);
     color: rgb(120, 59, 12);
 }
 
