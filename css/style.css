@@ -553,6 +553,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 .testimonial-carousel .owl-item .testimonial-item,
 .testimonial-carousel .owl-item.center .testimonial-item * {
     transition: .5s;
+    border-radius: 20px !important;
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item {
