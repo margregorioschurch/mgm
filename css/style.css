@@ -35,9 +35,14 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     line-height:1.2;
     color: var(--dark)
 }
+
 .text-justify{
     text-align: justify;
     text-justify: inter-word;
+}
+
+.text-primary{
+    text-shadow: 2px 2px 1px #00000021;
 }
 
 .ff-secondary {
@@ -200,12 +205,13 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 
 /*** Hero Header ***/
 .hero-header {
-    background: linear-gradient(rgb(120 59 12 / 80%), rgb(112 127 135 / 80%)), url(../img/2018-05-04.jpg);
+    background: linear-gradient(rgb(120 59 12 / 50%), rgb(9 4 0 / 50%)), url(../img/2018-05-04.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 750px;
     width: auto;
+    display: block;
 }
 
 @media screen and (max-width: 325px){
