@@ -337,6 +337,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     height: 100%;
     margin: 0;
     font-weight: 700;
+    font-size: 14px;
     line-height: 25px;
     text-align: center;
     -moz-transform: translateX(100%);
