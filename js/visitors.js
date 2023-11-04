@@ -1,97 +1,116 @@
-//const countEl=document.getElementById("CounterVisitor");function updateVisitCount(){fetch("https://api.countapi.xyz/update/mgm/visits/?amount=1").then(t=>t.json()).then(t=>{countEl.innerHTML=t.value})}updateVisitCount();
-const button1 = document.querySelector("button1");
+/* ---- particles.js config ---- */
 
-function isTweening() {
-  let scanner = gsap.isTweening(".scanner");
-  let button = gsap.isTweening("button1");
-
-  return scanner || button;
-}
-
-button1.addEventListener("click", function (e) {
-  e.preventDefault();
-
-  if (isTweening()) return;
-
-  const tl = gsap.timeline();
-
-  gsap.set(".scanner", {
-    x: 0,
-    background: "#292e3e",
-    boxShadow: `0 0 0px #fff, 0 0 0px #fff, 0 0 0px #fff, 0 0 0px #228dff,
-    0 0 0px #228dff, 0 0 0px #228dff, 0 0 0px #228dff, 0 0 0px #228dff`
-  });
-
-  gsap.set("button1", {
-    innerHTML: "Copy"
-  });
-
-  tl.to("button1", {
-    innerHTML: "Copying",
-    outline: "none",
-    boxShadow: `0px 0px 0px rgba(163, 177, 198, 0.6),
-    0px 0px 0px rgba(255, 255, 255, 0.5)`,
-    cursor: "wait",
-    duration: 0.01
-  })
-    .to("button1", {
-      innerHTML: "Copying.",
-      duration: 0.4
-    })
-    .to("button1", {
-      innerHTML: "Copying..",
-      duration: 0.4
-    })
-    .to("button1", {
-      innerHTML: "Copying...",
-      duration: 0.4
-    })
-    .to(
-      ".scanner",
-      {
-        boxShadow: `0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff,
-    0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff`,
-        background: "white",
-        duration: 0.2,
-        ease: "none"
+particlesJS("particles-js", {
+  particles: {
+    number: {
+      value: 80,
+      density: {
+        enable: true,
+        value_area: 800
+      }
+    },
+    color: {
+      value: ["#2EB67D", "#ECB22E", "#E01E5B", "#36C5F0"]
+    },
+    shape: {
+      type: ["circle"],
+      stroke: {
+        width: 0,
+        color: "#fff"
       },
-      "-=1.4"
-    )
-    .to(
-      ".scanner",
-      {
-        x: 420,
-        duration: 1,
-        ease: "none"
+      polygon: {
+        nb_sides: 5
       },
-      "-=1"
-    )
-    .to(".scanner", {
-      boxShadow: `0 0 0px #fff, 0 0 0px #fff, 0 0 0px #fff, 0 0 0px #228dff,
-    0 0 0px #228dff, 0 0 0px #228dff, 0 0 0px #228dff, 0 0 0px #228dff`,
-      background: "#292e3e",
-      duration: 0.2,
-      ease: "none"
-    })
-    .to(
-      "button1",
-      {
-        innerHTML: "Copied!",
-        outline: "none",
-        boxShadow: `0px 0px 0px rgba(163, 177, 198, 0.6),
-    0px 0px 0px rgba(255, 255, 255, 0.5);`
+      image: {
+        src: "https://cdn.freebiesupply.com/logos/large/2x/slack-logo-icon.png",
+        width: 100,
+        height: 100
+      }
+    },
+    opacity: {
+      value: 1,
+      random: false,
+      anim: {
+        enable: false,
+        speed: 1,
+        opacity_min: 0.1,
+        sync: false
+      }
+    },
+    size: {
+      value: 8,
+      random: true,
+      anim: {
+        enable: false,
+        speed: 10,
+        size_min: 10,
+        sync: false
+      }
+    },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#808080",
+      opacity: 0.4,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 5,
+      direction: "none",
+      random: false,
+      straight: false,
+      out_mode: "out",
+      bounce: false,
+      attract: {
+        enable: false,
+        rotateX: 600,
+        rotateY: 1200
+      }
+    }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: {
+        enable: true,
+        mode: "grab"
       },
-      "-=0.1"
-    )
-    .to(
-      "button1",
-      {
-        innerHTML: "Copy",
-        boxShadow: `1px 1px 2px rgba(163, 177, 198, 0.6),
-    -1px -1px 2px rgba(255, 255, 255, 0.5)`,
-        cursor: "pointer"
+      onclick: {
+        enable: true,
+        mode: "push"
       },
-      "+=1"
-    );
+      resize: true
+    },
+    modes: {
+      grab: {
+        distance: 140,
+        line_linked: {
+          opacity: 1
+        }
+      },
+      bubble: {
+        distance: 400,
+        size: 40,
+        duration: 2,
+        opacity: 8,
+        speed: 3
+      },
+      repulse: {
+        distance: 200,
+        duration: 0.4
+      },
+      push: {
+        particles_nb: 4
+      },
+      remove: {
+        particles_nb: 2
+      }
+    }
+  },
+  retina_detect: true
 });
 
+
+
+//const countEl=document.getElementById("CounterVisitor");function updateVisitCount(){fetch("https://api.countapi.xyz/update/mgm/visits/?amount=1").then(t=>t.json()).then(t=>{countEl.innerHTML=t.value})}updateVisitCount();
