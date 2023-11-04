@@ -32,6 +32,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+	<link href="css/style1.css" rel="stylesheet">
 </head>
 
 <body>
@@ -44,7 +45,7 @@
         </div>
         <!-- Spinner End -->
 
-
+	<div id="tsparticles"></div>
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark-2 px-4 px-lg-5 py-3 py-lg-2">
@@ -62,7 +63,7 @@
                         <!-- <a href="service.html" class="nav-item nav-link">Service</a> -->
                         <a href="events.html" class="nav-item nav-link">Events</a>
                         <!-- <div class="nav-item dropdown"> -->
-                        <a href="booking.html" class="nav-item nav-link active">Booking</a>
+                        <a href="#" class="nav-item nav-link active" onclick="enableAutoplay()">Booking</a>
                             <!-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a> -->
                             <!-- <div class="dropdown-menu m-0">
                                 <a href="booking.html" class="dropdown-item">Booking</a>
@@ -189,7 +190,7 @@
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Church</h4>
                         <a class="btn btn-link" href="about.html">About Us</a>
                         <a class="btn btn-link" href="contact.html">Contact Us</a>
-                        <a class="btn btn-link" href="booking.html">Bookings</a>
+                        <a class="btn btn-link" href="#" onclick="disableAutoplay()">Bookings</a>
                         <a class="btn btn-link" href="#">Privacy Policy</a>
                         <a class="btn btn-link" href="#">Terms & Condition</a>
                     </div>
@@ -281,6 +282,9 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/visitors.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.12.0/tsparticles.bundle.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>-->
     <script>
         // 2. This code loads the IFrame Player API code asynchronously.
         var tag = document.createElement('script');
