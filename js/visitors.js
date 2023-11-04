@@ -1,5 +1,5 @@
 const particleJS = document.getElementById("particles-JS");
-particlesJS("particles-js", {
+$particlesJS("particles-js", {
   "particles": {
     "number": {
       "value": 80,
