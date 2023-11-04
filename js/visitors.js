@@ -1,113 +1,91 @@
-/* ---- particles.js config ---- */
-window.addEventListener('DOMContentLoaded', (event) => {
-particlesJS("particles-js", {
-  particles: {
-    number: {
-      value: 80,
-      density: {
-        enable: true,
-        value_area: 800
-      }
-    },
-    color: {
-      value: ["#2EB67D", "#ECB22E", "#E01E5B", "#36C5F0"]
-    },
-    shape: {
-      type: ["circle"],
-      stroke: {
-        width: 0,
-        color: "#fff"
-      },
-      polygon: {
-        nb_sides: 5
-      },
-      image: {
-        src: "https://cdn.freebiesupply.com/logos/large/2x/slack-logo-icon.png",
-        width: 100,
-        height: 100
-      }
-    },
-    opacity: {
-      value: 1,
-      random: false,
-      anim: {
-        enable: false,
-        speed: 1,
-        opacity_min: 0.1,
-        sync: false
-      }
-    },
-    size: {
-      value: 8,
-      random: true,
-      anim: {
-        enable: false,
-        speed: 10,
-        size_min: 10,
-        sync: false
-      }
-    },
-    line_linked: {
-      enable: true,
-      distance: 150,
-      color: "#808080",
-      opacity: 0.4,
-      width: 1
-    },
-    move: {
-      enable: true,
-      speed: 5,
-      direction: "none",
-      random: false,
-      straight: false,
-      out_mode: "out",
-      bounce: false,
-      attract: {
-        enable: false,
-        rotateX: 600,
-        rotateY: 1200
-      }
+const canvas = document.querySelector("#bubble-canvas");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const bubbleColorString = "rgba(255,242,216,";
+
+let particlesArray;
+
+class Particle{
+    constructor(x, y, directionX, directionY, size, color){
+        this.x = x;
+        this.y = y;
+        this.directionX = directionX;
+        this.directionY = directionY;
+        this.size = size;
+        this.color = color;
     }
-  },
-  interactivity: {
-    detect_on: "canvas",
-    events: {
-      onhover: {
-        enable: true,
-        mode: "grab"
-      },
-      onclick: {
-        enable: true,
-        mode: "push"
-      },
-      resize: true
-    },
-    modes: {
-      grab: {
-        distance: 140,
-        line_linked: {
-          opacity: 1
+    //method to draw individual particle
+    draw(){
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+    }
+    update(){
+        //check if particle is still within canvas
+        //if it is too much on the right
+        if(this.x > canvas.width){
+            //we reset it to the left
+            this.x= 0;
         }
-      },
-      bubble: {
-        distance: 400,
-        size: 40,
-        duration: 2,
-        opacity: 8,
-        speed: 3
-      },
-      repulse: {
-        distance: 200,
-        duration: 0.4
-      },
-      push: {
-        particles_nb: 4
-      },
-      remove: {
-        particles_nb: 2
-      }
+        //vice versa
+        if(this.x < 0){
+            this.x = canvas.width;
+        }
+        //if it is too much up
+        //we reset it at the bottom
+        if(this.y < 0){
+            this.y = canvas.height;
+        }
+        //move particle
+        // random x direction between -2.5 and 2.5
+        let directionX = (Math.random() * 5) -2.5;
+        this.x += this.directionX;
+        this.y += this.directionY;
+        //draw particle
+        this.draw();
     }
-  },
-  retina_detect: true
-});
-});
+}
+
+//create particle array
+function init(){
+    particlesArray = [];
+    let numberOfParticles = (canvas.height * canvas.width) / 45000;
+    for(let i = 0; i < numberOfParticles; i++){
+        // random size between 1 and 52
+        let size = (Math.random() * 52) + 1;
+        // random x for the spawn point
+        let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2)
+        let directionX = (Math.random() * 2) - 1;
+        let directionY = (Math.random() * -2) -1;
+        //color
+        let color = bubbleColorString + (Math.random() *(0.3 - 0.1) + 0.1)+ ")";
+        particlesArray.push(new Particle(x, 921, directionX, directionY, size, color));
+
+    }
+}
+
+//animation loop
+function animate() {
+    //will play this function each frame
+    requestAnimationFrame(animate);
+    //clear screen
+    ctx.clearRect(0,0,innerWidth, innerHeight);
+    //update each particle
+    for (let i =0; i < particlesArray.length; i++){
+        particlesArray[i].update();
+    }
+}
+
+//recalculate canvas size when resizing the window
+window.addEventListener("resize", 
+    function(){
+        canvas.width=this.innerWidth;
+        canvas.height = this.innerHeight;
+    })
+
+init();
+animate();
+//const countEl=document.getElementById("CounterVisitor");function updateVisitCount(){fetch("https://api.countapi.xyz/update/mgm/visits/?amount=1").then(t=>t.json()).then(t=>{countEl.innerHTML=t.value})}updateVisitCount();
