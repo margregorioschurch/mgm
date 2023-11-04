@@ -1,4 +1,3 @@
-//const countEl=document.getElementById("CounterVisitor");function updateVisitCount(){fetch("https://api.countapi.xyz/update/mgm/visits/?amount=1").then(t=>t.json()).then(t=>{countEl.innerHTML=t.value})}updateVisitCount();
 const button1 = document.querySelector("button1");
 
 function isTweening() {
@@ -94,4 +93,4 @@ button1.addEventListener("click", function (e) {
       "+=1"
     );
 });
-
+//const countEl=document.getElementById("CounterVisitor");function updateVisitCount(){fetch("https://api.countapi.xyz/update/mgm/visits/?amount=1").then(t=>t.json()).then(t=>{countEl.innerHTML=t.value})}updateVisitCount();
