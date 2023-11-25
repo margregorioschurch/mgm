@@ -31,8 +31,7 @@
 .btn-16 {
   border: none;
   color: #000;
-  position: absolute;
-  bottom:55px;
+  position: relative;
 }
 .btn-16:after {
   position: absolute;
