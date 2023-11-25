@@ -10,7 +10,7 @@
 }
 
 .check-box {
-	transform: scale(2);
+	transform: translate(15px, -80px);
 }
 
 input[type="checkbox"] {
@@ -39,7 +39,6 @@ input[type="checkbox"]::after {
     background: #fff;
     border-radius: 50%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    transform: scale(1.1);
     transition: 0.4s;
 }
 
