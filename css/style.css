@@ -807,7 +807,7 @@ table tr td button {
     }}
 
 .custom-btn {
-  width: 130px;
+  width: auto;
   height: 40px;
   color: #fff;
   border-radius: 5px;
@@ -829,7 +829,7 @@ table tr td button {
   border: none;
   color: #000;
   position: absolute;
-  bottom:65px;
+  bottom:55px;
 }
 .btn-16:after {
   position: absolute;
