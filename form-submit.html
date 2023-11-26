@@ -34,6 +34,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+	<link href="css/style1.css" rel="stylesheet">
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js'></script>
     <!-- <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -48,7 +49,18 @@
 </head>
 
 <body>
-<!-- Navbar & Hero Start -->
+	<div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 5rem; height: 5rem;" role="status">
+                <!-- <span class="sr-only">Loading...</span> -->
+            </div>
+        </div>
+        <!-- Spinner End -->
+	<!--particle-->
+	<div id="tsparticles"></div>
+	<!--particle End-->
+	<!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark-2 px-4 px-lg-5 py-3 py-lg-2">
                 <a href="" class="navbar-brand p-0">
@@ -115,6 +127,12 @@
             <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
             <!-- Google Translate -->
         </div>
+	<!-- Checkbox -->
+	    <div>
+	     	<div class="check-box">
+			<input type="checkbox">
+		</div>
+	    </div>
         <!-- Navbar & Hero End -->
         <!-- Verses Start -->
         <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -296,6 +314,7 @@
     <script src="js/main.js"></script>
     <!--<script src="js/calendar.js"></script>-->
     <script src="js/readings.js"></script>
+    <script src="js/visitors.js"></script>
     <script>
         $("#submitForm").click(function() {
            alert("Connecting..");
