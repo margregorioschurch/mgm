@@ -795,6 +795,7 @@ table tr td button {
     margin: 4px 0;
     padding: 4px 5px 4px 5px;
     font-family: "Open Sans",sans-serif;
+    cursor: pointer;
 }
 @media screen and (max-width:992px) {
     #google_translate_element{
