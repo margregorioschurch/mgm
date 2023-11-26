@@ -10,9 +10,11 @@
 }
 
 .check-box {
-	transform: translate(0px, -80px);
+	transform: translate(0px, -100px);
 	margin-left: 10px;
 	position: relative;
+	width: 60px;
+	padding: 1px;
 }
 
 input[type="checkbox"] {
