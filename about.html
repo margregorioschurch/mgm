@@ -32,6 +32,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+	<link href="css/style1.css" rel="stylesheet">
 </head>
 
 <body>
@@ -44,10 +45,10 @@
         </div>
         <!-- Spinner End -->
 
-
+ 	<div id="tsparticles"></div>
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-2">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark-2 px-4 px-lg-5 py-3 py-lg-2">
                 <a href="" class="navbar-brand p-0">
                     <!-- <h1 class="text-primary m-0"><i class="fa fa-church me-3"></i>Mar.Gregorios Church<h1> -->
                     <img src="img/logo/oie_qTSaQBp0mY24.png" alt="Logo">
@@ -58,7 +59,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link active">About</a>
+                        <a href="#" class="nav-item nav-link active">About</a>
                         <!-- <a href="service.html" class="nav-item nav-link">Service</a> -->
                         <a href="events.html" class="nav-item nav-link">Events</a>
                         <!-- <div class="nav-item dropdown"> -->
@@ -99,6 +100,13 @@
                     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
             <!-- Google Translate -->
         </div>
+	    <!-- Checkbox -->
+	    <div>
+	     	<div class="check-box">
+			<small class="text-muted" style="font-size: 8px;">Enable Theme</small>
+			<input type="checkbox">
+		</div>
+	    </div>
         <!-- Navbar & Hero End -->
 
 
@@ -277,12 +285,12 @@
         <!-- Video End -->
         
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer pt-5 mt-1 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5">
+        <div class="container-fluid bg-dark-2 text-light footer pt-5 mt-1 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-3 b-top">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Church</h4>
-                        <a class="btn btn-link" href="about.html">About Us</a>
+                        <a class="btn btn-link" href="#" onclick="disableAutoplay()">About Us</a>
                         <a class="btn btn-link" href="contact.html">Contact Us</a>
                         <a class="btn btn-link" href="booking.html">Bookings</a>
                         <a class="btn btn-link" href="#">Privacy Policy</a>
@@ -318,6 +326,11 @@
                         </div>
                     </div>
                 </div>
+		    <!--Counter-->
+		    <div style="width: 100%;height: auto;text-align-last: center;padding: 8px;">
+		 	<a href="https://hits.sh/margregorioschurch.github.io/mgm/" class="text-center"><img alt="Hits" src="https://hits.sh/margregorioschurch.github.io/mgm.svg?style=for-the-badge&label=Visitors%20Count&color=eaeeb5&labelColor=bc451d"/></a>
+		    </div>
+		    <!--Counter-->
             </div>
             <div class="container">
                 <div class="copyright">
@@ -339,15 +352,18 @@
                         </div>
                     </div>
                 </div>
+		    <!--<a id="new_counter" href='http://www.freevisitorcounters.com' style="color:transparent">freevisitorcounters.com</a>
+    		    <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=d79198028b524b7db87c3ec2d625a1e3f6598080'></script>
+    	  	    <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1024946/t/5"></script>-->
             </div>
         </div>
         <!-- Footer End -->
 
         <!--Counter-->
-        <div class="counter">
+        <!--<div class="counter">
             <div class="head"><span class="fa fa-globe"></span>&nbsp;Visitors Counter</div>
             <div class="count" id="CounterVisitorNo">0</div>
-        </div>
+        </div>-->
         <!--END Counter-->
 
         <!-- Back to Top -->
@@ -368,6 +384,9 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/visitors.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.12.0/tsparticles.bundle.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>-->
     <script>
         $("#submitForm").click(function() {
            alert("The Form has been Submitted.");

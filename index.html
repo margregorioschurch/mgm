@@ -34,6 +34,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+	<link href="css/style1.css" rel="stylesheet">
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js'></script>
     <!-- <script>
 
@@ -57,11 +58,12 @@
             </div>
         </div>
         <!-- Spinner End -->
-
-
+	<!--particle-->
+	<div id="tsparticles"></div>
+	<!--particle End-->
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-2">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark-2 px-4 px-lg-5 py-3 py-lg-2">
                 <a href="" class="navbar-brand p-0">
                     <!-- <h1 class="text-primary m-0"><i class="fa fa-church me-3"></i>Mar.Gregorios Church<h1> -->
                     <img src="img/logo/oie_qTSaQBp0mY24.png" alt="Logo">
@@ -71,7 +73,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="#" class="nav-item nav-link active">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <!-- <a href="service.html" class="nav-item nav-link">Service</a> -->
                         <a href="events.html" class="nav-item nav-link">Events</a>
@@ -97,7 +99,7 @@
                             <h1 class="display-3 text-white animated slideInLeft">Mar.Gregorios<br>Orthodox Church</h1>
                             <p class="text-white animated slideInLeft mb-4 pb-2"><span class="text-primary fw-bold">Diocese</span> : Diocese of Chengannur
                             <br><span class="text-primary fw-bold">Location</span> : Thottapuzha, Eraviperoor P.O, Thiruvalla - 689542</p>
-                            <a href="#index-about" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Read More</a>
+                            <a href="#index-about" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft" type="button">Read More</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                             <img id="right-image-animation" class="img-fluid" src="img/hero-bg-church.png" alt="image">
@@ -125,6 +127,11 @@
             <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
             <!-- Google Translate -->
         </div>
+	    <!-- Checkbox -->
+	     	<div class="check-box">
+			<small class="text-muted" style="font-size: 8px;">Enable Theme</small>
+			<input type="checkbox" title="Twinkle Theme">
+	    </div>
         <!-- Navbar & Hero End -->
 
 
@@ -228,7 +235,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="btn btn-primary py-3 px-5 mt-2" href="about.html">Read More</a>
+                        <a class="btn btn-primary py-3 px-5 mt-2" href="about.html" type="button">Read More</a>
                     </div>
                 </div>
             </div>
@@ -266,9 +273,13 @@
                 </div>
             </div>
         </div>
-        <!-- Video Start -->
-
-        <!-- Event Start -->
+        <!-- Video Ends -->
+	<!-- Random Starts -->
+	<div>
+		<canvas id="bubble-canvas"></canvas>
+	</div>
+	<!-- Random Ends -->
+	<!-- Event Start -->
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -278,7 +289,7 @@
                 <br>
 
                 <!-- Calendar Start -->
-                <div id='calendar' class="row col-xl-auto mt-3"></div>
+                <div id='calendar' class="row col-xl-auto mt-3 p-1"></div>
                 <br>
                 <div class="row row-cols-auto text-center">
                 <a id="btn-center" class="btn-primary py-1 px-3 mb-3" href="https://mosc.in/uploads/2022/12/Panjangom2023_compressed.pdf" target="_blank" rel="noreferrer"><i class="fa fa-download"></i> Download Calendar</a>
@@ -293,7 +304,8 @@
                     <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
                         <li class="nav-item">
                             <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
-                                <i class="fa fa-angle-left fa-2x text-primary"></i>
+                                <i class="fa fa-angle-left fa-2x text-primary"></i>&nbsp;&nbsp;&nbsp;
+				    <i class="fa fa-calendar-check fa-2x text-primary"></i>
                                 <div class="ps-3">
                                     <small class="text-body">Upcoming</small>
                                     <h6 class="mt-n1 mb-0">Events</h6>
@@ -307,20 +319,19 @@
                                 <div class="ps-3">
                                     <small class="text-body">Present</small>
                                     <h6 class="mt-n1 mb-0">Scripture Readings</h6>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
+                                <i class="fab fa-facebook fa-2x text-primary"></i>
+                                <div class="ps-3">
+                                    <small class="text-body">Facebook</small>
+                                    <h6 class="mt-n1 mb-0">Group</h6>
                                 </div>&nbsp;&nbsp;&nbsp;
                                 <i class="fa fa-angle-right fa-2x text-primary"></i>
                             </a>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
-                                
-                                <div class="ps-3">
-                                    <small class="text-body">Past</small>
-                                    <h6 class="mt-n1 mb-0">Events</h6>
-                                </div>&nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-angle-right fa-2x text-primary"></i>
-                            </a>
-                        </li> -->
                     </ul>
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane fade show p-0 active">
@@ -438,21 +449,17 @@
                                         </div>
                             </div>
                         </div>
-                        <!-- <div id="tab-3" class="tab-pane fade show p-0">
+                        <div id="tab-3" class="tab-pane fade show p-0">
                             <div class="row g-4">
-                                <div class="col-lg-6">
+                                <!--<div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 65px;">
-                                        <div class="w-100 d-flex flex-column text-start ps-4">
-                                            <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                                <span>Programmes</span>
-                                                <span class="text-primary">01/01/2023</span>
-                                            </h5>
-                                            <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                        <img class="flex-shrink-0 img-fluid rounded" src="img/menu-1.jpg" alt="" style="width: 50px;">-->
+                                        <div class="w-100 text-center grid-box-sc py-5">
+			    			<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Forthodox.mossv%2F&tabs=timeline&width=380&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="380" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
+                              </div>
+                         </div>
+                                <!--<div class="col-lg-6">
                                     <div class="d-flex align-items-center">
                                         <img class="flex-shrink-0 img-fluid rounded" src="img/menu-2.jpg" alt="" style="width: 65px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
@@ -695,8 +702,8 @@
         </div>
         <!-- Verses End -->
         <!-- Prayer Start -->
-        <div class="col-md-12 bg-dark align-items-center">
-            <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="col-md-12 bg-dark-1 align-items-center">
+            <div class="p-5 wow fadeInUp" data-wow-delay="0.2s"> 
                 <h5 class="ff-secondary text-primary fw-normal text-center py-5">For Prayers</h5>
                 <!-- <h1 class="text-white mb-4">please fill the form</h1> -->
                 <form class="form-wrap" action="https://formsubmit.co/margregorioschurch71@gmail.com" method="POST">
@@ -737,8 +744,8 @@
         
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer pt-5 mt-1 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5">
+        <div class="container-fluid bg-dark-2 text-light footer pt-5 mt-1 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-3 b-top">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Church</h4>
@@ -748,18 +755,21 @@
                         <a class="btn btn-link" href="#">Privacy Policy</a>
                         <a class="btn btn-link" href="#">Terms & Condition</a>
                     </div>
+			
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
                         <p class="mb-2 btn-link"><i class="fa fa-map-marker-alt me-3"></i><a class="text-light" href="https://goo.gl/maps/bPcQHy4m9zeorK3y9" target="_blank">Thottapuzha, Eraviperoor, Kerala 689542</a></p>
                         <p class="mb-2 btn-link"><i class="fa fa-phone-square me-3"></i><a class="text-light" href="tel:0469 2668858">0469-2668858</a></p>
                         <p class="mb-2 btn-link"><i class="fa fa-envelope me-3"></i><a class="text-light" href="mailto:margregorioschurch71@gmail.com">margregorioschurch71@gmail.com</a></p>
-                        <div class="d-flex pt-2">
+                       
+		     <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social text-primary" href="#"><i class="fab fa-whatsapp"></i></a>
                             <a class="btn btn-outline-light btn-social text-primary" href="https://www.facebook.com/groups/205694423941111" target="_blank"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-outline-light btn-social text-primary" href="https://www.youtube.com/@anugrahaweddingstudio8764" target="_blank"><i class="fab fa-youtube"></i></a>
                             <a class="btn btn-outline-light btn-social text-primary" href="https://directory.mosc.in/parishes/mar-gregorios-orthodox-church-49/" target="_blank"><i class="fab fa-internet-explorer"></i></a>
                         </div>
                     </div>
+			
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Service</h4>
                         <h5 class="text-light fw-normal">Sunday</h5>
@@ -767,6 +777,7 @@
                         <h5 class="text-light fw-normal">Monday - Friday</h5>
                         <p><i class="fa fa-clock me-3"></i>TBA</p>
                     </div>
+			
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
                         <p>Subscribe to know the latest news.</p>
@@ -778,7 +789,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
+		    <!--Counter-->
+		    <div style="width: 100%;height: auto;text-align-last: center;padding: 8px;">
+		 	<a href="https://hits.sh/margregorioschurch.github.io/mgm/" class="text-center"><img alt="Hits" src="https://hits.sh/margregorioschurch.github.io/mgm.svg?style=for-the-badge&label=Visitors%20Count&color=eaeeb5&labelColor=bc451d"/></a>
+		    </div>
+		    <!--Counter-->
+            </div>	
             <div class="container">
                 <div class="copyright">
                     <div class="row">
@@ -799,19 +815,28 @@
                         </div>
                     </div>
                 </div>
+		    <!--<a id="new_counter" href='http://www.freevisitorcounters.com' style="color:transparent">freevisitorcounters.com</a>
+    		    <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=d79198028b524b7db87c3ec2d625a1e3f6598080'></script>
+    	  	    <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1024946/t/5"></script>-->
             </div>
         </div>
         <!-- Footer End -->
 	<!--Counter-->
-         <div class="counter">
-            	<div class="head"><span class="fa fa-globe" id="visitor-globe"></span>&nbsp;Visitors Counter</div>
-		<div class="count" id="CounterVisitor">0</div>
-	 </div>
+         <!--<div class="counter">
+            	<!--<div class="head"><span class="fa fa-globe" id="visitor-globe"></span>&nbsp;Visitors Counter</div>
+		<div class="count" id="CounterVisitor">0</div>-->
+		 
+	 <!--</div>-->
 	<!--END Counter-->
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
-
+    <!--https://www.freevisitorcounters.com/-->
+    <!--<div class="counter">
+    <a id="new_counter" href='http://www.freevisitorcounters.com' style="color:transparent">freevisitorcounters.com</a>
+    <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=d79198028b524b7db87c3ec2d625a1e3f6598080'></script>
+    <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1024946/t/5"></script>
+    </div>-->
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -829,6 +854,8 @@
     <script src="js/calendar.js"></script>
     <script src="js/readings.js"></script>
     <script src="js/visitors.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.12.0/tsparticles.bundle.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>-->
     <script>
         $("#submitForm").click(function() {
            alert("Connecting..");
