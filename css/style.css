@@ -11,26 +11,6 @@
     --black: #202020;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #000000d1; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #bc451d; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #eaeeb5; 
-}
-
 html {
   scroll-behavior: smooth !important;
 }
