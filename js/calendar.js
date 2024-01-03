@@ -635,7 +635,211 @@ document.addEventListener('DOMContentLoaded', function() {
             start: '2024-02-29',
             end: '2024-02-29'
           },
-          
+          {
+            title: 'Third Friday of the Great Lent',
+            start: '2024-03-01',
+            end: '2024-03-01'
+          },
+          {
+            title: 'Third Saturday of the Great Lent',
+            start: '2024-03-02',
+            end: '2024-03-02'
+          },
+          {
+            title: 'Commemoration of King Abgar of Edessa',
+            start: '2024-03-02',
+            end: '2024-03-02'
+          },
+          {
+            title: 'Memorial of Konattu Abraham Malpan (Pampakuda)',
+            start: '2024-03-02',
+            end: '2024-03-02'
+          },
+          {
+            title: 'Fourth Sunday of Great Lent (Canaanite woman)',
+            start: '2024-03-03',
+            end: '2024-03-03'
+          },
+          {
+            title: 'Fourth Monday of the Great Lent',
+            start: '2024-03-04',
+            end: '2024-03-04'
+          },
+          {
+            title: 'Feast of St Theodore of Amasea and St Ephrem the Syrian',
+            start: '2024-03-04',
+            end: '2024-03-04'
+          },
+          {
+            title: 'Fourth Tuesday of the Great Lent',
+            start: '2024-03-05',
+            end: '2024-03-05'
+          },
+          {
+            title: 'Fourth Wednesday of the Great Lent (Mid Lent)',
+            start: '2024-03-06',
+            end: '2024-03-06'
+          },
+          {
+            title: 'Fourth Thursday of the Great Lent',
+            start: '2024-03-07',
+            end: '2024-03-07'
+          },
+          {
+            title: 'Fourth Friday of the Great Lent',
+            start: '2024-03-08',
+            end: '2024-03-08'
+          },
+          {
+            title: 'Fourth Saturday of the Great Lent',
+            start: '2024-03-09',
+            end: '2024-03-09'
+          },
+          {
+            title: 'Memory of Forty Martyrs of Sebastia',
+            start: '2024-03-09',
+            end: '2024-03-09'
+          },
+          {
+            title: 'Commemoration of Ambattu Geevarghese Mar Coorilose Metropolitan (Angamaly Cheria Palli)',
+            start: '2024-03-09',
+            end: '2024-03-09'
+          },
+          {
+            title: 'Fifth Sunday of Great Lent (Kpiptho/Crippled woman)',
+            start: '2024-03-10',
+            end: '2024-03-10'
+          },
+          {
+            title: 'Fifth Monday of the Great Lent',
+            start: '2024-03-11',
+            end: '2024-03-11'
+          },
+          {
+            title: 'Fifth Tuesday of the Great Lent',
+            start: '2024-03-12',
+            end: '2024-03-12'
+          },
+          {
+            title: 'Fifth Wednesday of the Great Lent',
+            start: '2024-03-13',
+            end: '2024-03-13'
+          },
+          {
+            title: 'Fifth Thursday of the Great Lent',
+            start: '2024-03-14',
+            end: '2024-03-14'
+          },
+          {
+            title: 'Fifth Friday of the Great Lent',
+            start: '2024-03-15',
+            end: '2024-03-15'
+          },
+          {
+            title: 'Fifth Saturday of the Great Lent',
+            start: '2024-03-16',
+            end: '2024-03-16'
+          },
+          {
+            title: 'Commemoration of HG Paulose Mar Severios Metropolitan (Kunnamkulam Arthat Puthur Church)',
+            start: '2024-03-17',
+            end: '2024-03-17'
+          },
+          {
+            title: 'Sixth Sunday of Great Lent (Blind Man, Catholicate Day)',
+            start: '2024-03-17',
+            end: '2024-03-17'
+          },
+           {
+            title: 'Monday before Hosanna',
+            start: '2024-03-18',
+            end: '2024-03-18'
+          },
+          {
+            title: 'Commemoration of HG Sleeba Mar Osthathios Metropolitan (Kunnamkulam Arthat Puthur Church)',
+            start: '2024-03-19',
+            end: '2024-03-19'
+          },
+          {
+            title: 'Tuesday before Hosanna',
+            start: '2024-03-19',
+            end: '2024-03-19'
+          },
+          {
+            title: 'Wednesday before Hosanna',
+            start: '2024-03-20',
+            end: '2024-03-20'
+          },
+           {
+            title: 'Thursday before Hosanna',
+            start: '2024-03-21',
+            end: '2024-03-21'
+          },
+           {
+            title: 'Friday before Hosanna (40th Friday)',
+            start: '2024-03-22',
+            end: '2024-03-22'
+          },
+           {
+            title: 'Commemoration of Konattu Geevarghese Mar Julios Metropolitan (Pampukuda)',
+            start: '2024-03-22',
+            end: '2024-03-22'
+          },
+           {
+            title: 'Saturday before Hosanna (Lazarus Saturday)',
+            start: '2024-03-23',
+            end: '2024-03-23'
+          },
+           {
+            title: 'Hosanna/Palm Sunday (Boys and Girls Day)',
+            start: '2024-03-24',
+            end: '2024-03-24'
+          },
+           {
+            title: 'Vachanippu (Suboro), Anunciation to St Mary',
+            start: '2024-03-25',
+            end: '2024-03-25'
+          },
+           {
+            title: 'Commemoration of Marthoma IV (Kandanadu Church)',
+            start: '2024-03-25',
+            end: '2024-03-25'
+          },
+           {
+            title: 'Monday of the Passion Week',
+            start: '2024-03-25',
+            end: '2024-03-25'
+          },
+           {
+            title: 'Tuesday of the Passion Week',
+            start: '2024-03-26',
+            end: '2024-03-26'
+          },
+          {
+            title: 'Wednesday of the Passion Week',
+            start: '2024-03-27',
+            end: '2024-03-27'
+          },
+           {
+            title: 'Passover (Maundy Thursday)',
+            start: '2024-03-28',
+            end: '2024-03-28'
+          },
+           {
+            title: 'Good Friday',
+            start: '2024-03-29',
+            end: '2024-03-29'
+          },
+          {
+            title: 'Gospel Saturday (Saturday of Good Tidings)',
+            start: '2024-03-30',
+            end: '2024-03-30'
+          },
+           {
+            title: 'Kymtho/Easter',
+            start: '2024-03-31',
+            end: '2024-03-31'
+          },
           
           
 
