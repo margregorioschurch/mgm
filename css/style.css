@@ -341,6 +341,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     font-size: 14px;
     line-height: 25px;
     text-align: start;
+    transition: 0.5s ease-in;
     -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
@@ -363,7 +364,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 
 @keyframes scroll-left {
     0% {
-        transform: translateX(100%);
+        transform: translateX(20%);
     }
     100% {
         transform: translateX(-100%); /* Change this value based on your needs */
