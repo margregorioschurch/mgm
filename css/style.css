@@ -389,12 +389,13 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 }
 
 #calendar .fc-h-event .fc-event-main-frame {
-    display: inline-grid;
+    display:block;
+    overflow-x:scroll !important;
+    overflow-y:hidden;
 }
 
 .fc-h-event .fc-event-title-container {
     min-width:auto !important;
-    overflow-x:scroll !important;
 }
 
 #btn-center{
