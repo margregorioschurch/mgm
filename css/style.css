@@ -379,8 +379,9 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     overflow: visible !important;
 }
 
-#calendar .fc-event-title:hover {
+#calendar .fc-h-event .fc-event-title:hover {
   animation-play-state: paused;
+    color:black;
 }
 
 @media screen and (max-width: 768px) {
@@ -418,7 +419,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 }
 
 #calendar .fc-h-event .fc-event-main-frame {
-    overflow-x:scroll !important;
+    overflow-x:hidden;
     overflow-y:hidden;
 }
 
