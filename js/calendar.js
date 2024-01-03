@@ -310,12 +310,12 @@ document.addEventListener('DOMContentLoaded', function() {
           },
           {
             title: 'Feast of St. Sylvester the Pope of Rome',
-            start: '2024-01-02T06:00:00',
+            start: '2024-01-02',
             end: '2024-01-02'
           },
           {
             title: 'Feast of St. John The Apostle and Evangelist',
-            start: '2024-01-02T11:00:00',
+            start: '2024-01-02',
             end: '2024-01-02'
           },
           {
