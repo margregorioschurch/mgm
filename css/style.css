@@ -355,6 +355,12 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     }
 }
 
+@media screen and (max-width: 768px) {
+    #calendar .fc-h-event .fc-event-title {
+        font-size: 12px; /* Adjust font size for smaller screens */
+        line-height: 20px; /* Adjust line height for smaller screens */
+    }
+}
 
 #calendar .fc-h-event .fc-event-main-frame {
     overflow-x:scroll !important;
