@@ -302,6 +302,44 @@ document.addEventListener('DOMContentLoaded', function() {
             start: '2023-12-31',
             end: '2023-12-31'
           },
+          {
+            title: 'New Year, Circumcision of our Lord, Feast of St Basil and St Gregory & All the Holy Fathers',
+            url: 'https://www.stgregoriosnc.org/component/ioccal/events',
+            start: '2024-01-01',
+            end: '2024-01-01'
+          },
+          {
+            title: 'Feast of St. Sylvester the Pope of Rome',
+            start: '2024-01-02T06:00:00',
+            end: '2024-01-02'
+          },
+          {
+            title: 'Feast of St. John The Apostle and Evangelist',
+            start: '2024-01-02T11:00:00',
+            end: '2024-01-02'
+          },
+          {
+            title: 'Commemoration of HH Mar Baselios Geevarghese II Catholicos (Devalokam Aramana)',
+            start: '2024-01-03',
+            end: '2024-01-03'
+          },
+          
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         // {
         //   groupId: '999',
         //   title: 'Repeating Event',
