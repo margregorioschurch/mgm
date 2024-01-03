@@ -1,9 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
-  
+   // Get today's date
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+    var yyyy = today.getFullYear();
+
+    var todayFormatted = yyyy + '-' + mm + '-' + dd;
+
     var calendar = new FullCalendar.Calendar(calendarEl, {
       initialView: 'dayGridMonth',
-      initialDate: '2023-01-01',
+      initialDate: todayFormatted, // Set initialDate to today's date
       headerToolbar: {
         left: 'prev,next today',
         center: 'title',
