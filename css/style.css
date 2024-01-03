@@ -354,6 +354,20 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
   animation-play-state: paused;
 }
 
+@media screen and (max-width: 768px) {
+    #calendar .fc-h-event .fc-event-title {
+        font-size: 12px; /* Adjust font size for smaller screens */
+        line-height: 20px; /* Adjust line height for smaller screens */
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -moz-animation: scroll-left 6s linear infinite !important;
+        -webkit-animation: scroll-left 6s linear infinite !important;
+        animation: scroll-left 6s linear infinite !important;
+        overflow: visible !important;
+    }
+}
+
 @keyframes scroll-left {
     0% {
         transform: translateX(100%);
@@ -378,13 +392,6 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     }
     100% {
         -webkit-transform: translateX(-100%); /* Change this value based on your needs */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    #calendar .fc-h-event .fc-event-title {
-        font-size: 12px; /* Adjust font size for smaller screens */
-        line-height: 20px; /* Adjust line height for smaller screens */
     }
 }
 
