@@ -408,7 +408,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 }
 
 .fc .fc-daygrid-day.fc-day-today {
-    background-color: rgb(255 219 34 / 40%);
+    background-color: rgb(255 219 34 / 40%) !important;
 }
 
 #btn-center{
