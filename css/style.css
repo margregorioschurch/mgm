@@ -350,7 +350,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     overflow: visible !important;
 }
 
-.scroll-left:hover {
+#calendar .fc-h-event .fc-event-title:hover {
   animation-play-state: paused;
 }
 
@@ -358,13 +358,6 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     #calendar .fc-h-event .fc-event-title {
         font-size: 12px; /* Adjust font size for smaller screens */
         line-height: 20px; /* Adjust line height for smaller screens */
-        -moz-transform: translateX(100%);
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
-        -moz-animation: scroll-left 6s linear infinite !important;
-        -webkit-animation: scroll-left 6s linear infinite !important;
-        animation: scroll-left 6s linear infinite !important;
-        overflow: visible !important;
     }
 }
 
@@ -399,6 +392,9 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     overflow-x:scroll !important;
 }
 
+.fc-h-event .fc-event-title-container {
+    min-width:auto !important;
+}
 
 #btn-center{
     position: relative;
