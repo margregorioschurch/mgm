@@ -312,8 +312,11 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 
 #calendar {
     max-width: 1100px;
+    min-height:430px;
     margin:20px auto;
     background: #feffeb;
+    border-radius: 2px;
+    border:1px solid #bc451d;
 }
 
 #calendar h2 {
