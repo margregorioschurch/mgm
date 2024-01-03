@@ -330,6 +330,312 @@ document.addEventListener('DOMContentLoaded', function() {
             start: '2024-01-03',
             end: '2024-01-03'
           },
+          {
+            title: 'Oath of Koonan Cross, Feast of Prophet Malachi',
+            start: '2024-01-03',
+            end: '2024-01-03'
+          },
+          {
+            title: 'Synaxis of the Seventy Disciples of the Lord',
+            start: '2024-01-04',
+            end: '2024-01-04'
+          },
+          {
+            title: 'Epiphany/Danaha, Baptism of our Lord Jesus Christ',
+            start: '2024-01-06',
+            end: '2024-01-06'
+          },
+          {
+            title: 'Feast Commemorating the Beheading of St John the Baptist',
+            start: '2024-01-07',
+            end: '2024-01-07'
+          },
+          {
+            title: 'First Sunday after Epiphany, Second Sunday after Christmas',
+            start: '2024-01-07',
+            end: '2024-01-04'
+          },
+          {
+            title: 'Feast Commemorating the Martyrdom of St. Stephen, the Head of the Deacons and the First Among Martyrs',
+            start: '2024-01-08',
+            end: '2024-01-08'
+          },
+          {
+            title: 'Feast of St. Gregory of Nyssa',
+            start: '2024-01-10',
+            end: '2024-01-10'
+          },
+          {
+            title: 'Feast of St. Theodosius of Antioch',
+            start: '2024-01-11',
+            end: '2024-01-11'
+          },
+           {
+            title: 'Second Sunday after Epiphany',
+            start: '2024-01-14',
+            end: '2024-01-14'
+          },
+          {
+            title: 'Feast of St. Mary for Seeds',
+            start: '2024-01-15',
+            end: '2024-01-15'
+          },
+          {
+            title: 'Commemoration of Paul the Monk',
+            start: '2024-01-15',
+            end: '2024-01-15'
+          },
+          {
+            title: 'Feast of St. Samuel, St. Simon, St. Antonios, Head of the Ascetics, Feast of St Athanasius the Great the Patriarch of Alexandria',
+            start: '2024-01-18',
+            end: '2024-01-18'
+          },
+          {
+            title: 'Commemoration of Michael Mar Dionysius Metropolitan (Panampady), Feast of St. Cyril of Alexandria',
+            start: '2024-01-18',
+            end: '2024-01-18'
+          },
+           {
+            title: 'Feast of St. Shemoun (Simeon) of Qartmin',
+            start: '2024-01-19',
+            end: '2024-01-19'
+          },
+          {
+            title: 'Sunday before Three day Lent (Pethurtho of Nineveh Fast), Commemoration of St John Chrysostom (Golden-mouthed)',
+            start: '2024-01-21',
+            end: '2024-01-21'
+          },
+          {
+            title: 'Third Sunday after Epiphany, Commemoration of HG Philipose Mar Eusebius (St. Basil Dayara, Pathanamthitta)',
+            start: '2024-01-21',
+            end: '2024-01-21'
+          },
+          {
+            title: 'Feast of St. Agnes of Rome, Feast of St. Anastasia the Patrician of Alexandria',
+            start: '2024-01-21',
+            end: '2024-01-21'
+          },
+           {
+            title: 'Monday of Three day Lent, Feast of St. Timothy',
+            start: '2024-01-22',
+            end: '2024-01-22'
+          },
+          {
+            title: 'Feast of St. Clement, Pope of Rome',
+            start: '2024-01-22',
+            end: '2024-01-22'
+          },
+          {
+            title: 'Feast of St. Timothy',
+            start: '2024-01-22',
+            end: '2024-01-22'
+          },
+          {
+            title: 'Tuesday of Three day Lent',
+            start: '2024-01-23',
+            end: '2024-01-23'
+          },
+           {
+            title: 'Commemoration of St Augen the monk',
+            start: '2024-01-23',
+            end: '2024-01-23'
+          },
+          {
+            title: 'Wednesday of Three day Lent (Commemoration of Prophet Jonah)',
+            start: '2024-01-24',
+            end: '2024-01-24'
+          },
+          {
+            title: 'Thursday / The end of Three day Lent',
+            start: '2024-01-25',
+            end: '2024-01-25'
+          },
+          {
+            title: 'Commemoration of HG Paulose Mar Athanasios Metropolitan (Aluva Thrikunnathu Seminary)',
+            start: '2024-01-26',
+            end: '2024-01-26'
+          },
+          {
+            title: 'All Departed Priests',
+            start: '2024-01-28',
+            end: '2024-01-28'
+          },
+           {
+            title: 'Fourth Sunday after Epiphany (Sunday for Workers)',
+            start: '2024-01-28',
+            end: '2024-01-28'
+          },
+          {
+            title: 'Mayaltho (Entry of our Lord into the temple), Feast of St Simeon',
+            start: '2024-02-02',
+            end: '2024-02-02'
+          },
+          {
+            title: 'Commemoration of HG Pathrose Mar Osthathios Metropolitan (Kandanadu Carmel Dayara)',
+            start: '2024-02-02',
+            end: '2024-02-02'
+          },
+          {
+            title: 'Commemoration of St Simon And Hanna',
+            start: '2024-02-02',
+            end: '2024-02-02'
+          },
+          {
+            title: 'All Departed Holy Fathers, Feast of St. Bar Soumo - the Chief Among Mourners & Mar Qauma',
+            start: '2024-02-03',
+            end: '2024-02-03'
+          },
+          {
+            title: 'All the Departed Faithful',
+            start: '2024-02-04',
+            end: '2024-02-04'
+          },
+          {
+            title: 'Fifth Sunday after Epiphany',
+            start: '2024-02-04',
+            end: '2024-02-04'
+          },
+          {
+            title: 'Feast of Saint Severios of Antioch',
+            start: '2024-02-08',
+            end: '2024-02-08'
+          },
+          {
+            title: 'Commemoration of HG Mathews Mar Epiphanios (St. Thomas Cathedral Kollam)',
+            start: '2024-02-09',
+            end: '2024-02-09'
+          },
+          {
+            title: 'First Sunday of Great Lent (Kothine Sunday) (Pethurtha of the Great Lent)',
+            start: '2024-02-11',
+            end: '2024-02-11'
+          },
+          {
+            title: 'First Monday of the Great Lent (Shubkono)',
+            start: '2024-02-12',
+            end: '2024-02-12'
+          },
+          {
+            title: 'Commemoration of Patriarch Ignatius Elias III (Manjinikkara Dayara), First Tuesday of the Great Lent',
+            start: '2024-02-13',
+            end: '2024-02-13'
+          },
+           {
+            title: 'Commemoration of Mar Ephrem Malpan the Syrian & Mar Theodorus of Amasea',
+            start: '2024-02-13',
+            end: '2024-02-13'
+          },
+          {
+            title: 'First Wednesday of the Great Lent',
+            start: '2024-02-14',
+            end: '2024-02-14'
+          },
+          {
+            title: 'First Thursday of the Great Lent',
+            start: '2024-02-15',
+            end: '2024-02-15'
+          },
+          {
+            title: 'First Friday of the Great Lent',
+            start: '2024-02-16',
+            end: '2024-02-16'
+          },
+          {
+            title: 'Commemoration of HG Geevarghese Mar Osthathios (St. Paul`s Mission Chapel, Mavelikkara)',
+            start: '2024-02-16',
+            end: '2024-02-16'
+          },
+          {
+            title: 'First Saturday of the Great Lent',
+            start: '2024-02-17',
+            end: '2024-02-17'
+          },
+          {
+            title: 'Second Sunday of Great Lent (Lepers Sunday)',
+            start: '2024-02-18',
+            end: '2024-02-18'
+          },
+          {
+            title: 'Second Monday of the Great Lent',
+            start: '2024-02-19',
+            end: '2024-02-19'
+          },
+          {
+            title: 'Commemoration of Elias Mar Julius Metropolitan (Manjanikara Dayra)',
+            start: '2024-02-19',
+            end: '2024-02-19'
+          },
+          {
+            title: 'Second Tuesday of the Great Lent',
+            start: '2024-02-20',
+            end: '2024-02-20'
+          },
+           {
+            title: 'Feast of the Establishment of the Throne in Antioch by Saint Peter',
+            start: '2024-02-21',
+            end: '2024-02-21'
+          },
+          {
+            title: 'Second Wednesday of the Great Lent',
+            start: '2024-02-21',
+            end: '2024-02-21'
+          },
+          {
+            title: 'Second Thursday of the Great Lent',
+            start: '2024-02-22',
+            end: '2024-02-22'
+          },
+          {
+            title: 'Feast of St Policarpos & St. Geevarghese Mar Dionysius Metropolitan Vatasseril, Malankara Church Bhasuran (Orthodox Theological Old Seminary Chapel, Kottayam)',
+            start: '2024-02-23',
+            end: '2024-02-23'
+          },
+          {
+            title: 'Second Friday of the Great Lent, Commemoration of HG Thomas Mar Makarios (Devalokam Aramana Chapel, Kottayam)',
+            start: '2024-02-23',
+            end: '2024-02-23'
+          },
+          {
+            title: 'Feast of St. Mathew the Evangelist, Second Saturday of the Great Lent',
+            start: '2024-02-24',
+            end: '2024-02-24'
+          },
+          {
+            title: 'Third Sunday of Great Lent (Palsy Sunday)',
+            start: '2024-02-25',
+            end: '2024-02-25'
+          },
+          {
+            title: 'Third Monday of the Great Lent',
+            start: '2024-02-26',
+            end: '2024-02-26'
+          },
+          {
+            title: 'Third Tuesday of the Great Lent',
+            start: '2024-02-27',
+            end: '2024-02-27'
+          },
+          {
+            title: 'Commemoration of Mar Aprem Malpan',
+            start: '2024-02-28',
+            end: '2024-02-28'
+          },
+          {
+            title: 'Commemoration of Mar Theodoros the Martyr',
+            start: '2024-02-28',
+            end: '2024-02-28'
+          },
+          {
+            title: 'Third Wednesday of the Great Lent',
+            start: '2024-02-28',
+            end: '2024-02-28'
+          },
+          {
+            title: 'Third Thursday of the Great Lent',
+            start: '2024-02-29',
+            end: '2024-02-29'
+          },
+          
           
           
 
