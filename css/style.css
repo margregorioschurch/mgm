@@ -12,7 +12,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 body {
@@ -312,8 +312,11 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 
 #calendar {
     max-width: 1100px;
+    min-height:430px;
     margin:20px auto;
     background: #feffeb;
+    border-radius: 2px;
+    border:1px solid #bc451d;
 }
 
 #calendar h2 {
@@ -329,8 +332,13 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 
 #calendar button {
     transition: all ease-in 0.3s;
+    font-weight:600;
+}
+
+#calendar button:hover {
+    transition: all ease-in 0.3s;
     color:#3788d8 !important;
-    font-weight:500;
+    font-weight:600;
 }
 
 #calendar .fc-h-event .fc-event-title {
@@ -340,17 +348,36 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     font-weight: 700;
     font-size: 14px;
     line-height: 25px;
-    text-align: center;
+    text-align: start;
+    transition: 0.5s ease-in;
     -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
-    -moz-animation: scroll-left 2s linear infinite !important;
-    -webkit-animation: scroll-left 2s linear infinite !important;
-    animation: scroll-left 18s linear infinite !important;
+    -moz-animation: scroll-left 12s linear infinite !important;
+    -webkit-animation: scroll-left 12s linear infinite !important;
+    animation: scroll-left 12s linear infinite !important;
     overflow: visible !important;
 }
-#calendar .fc-h-event .fc-event-main-frame {
-    overflow-x:scroll !important;
+
+#calendar .fc-h-event .fc-event-title:hover {
+  animation-play-state: paused;
+    color:black;
+}
+
+@media screen and (max-width: 768px) {
+    #calendar .fc-h-event .fc-event-title {
+        font-size: 12px; /* Adjust font size for smaller screens */
+        line-height: 20px; /* Adjust line height for smaller screens */
+    }
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(20%);
+    }
+    100% {
+        transform: translateX(-100%); /* Change this value based on your needs */
+    }
 }
 
 @-moz-keyframes scroll-left {
@@ -358,7 +385,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
         -moz-transform: translateX(100%);
     }
     100% {
-        -moz-transform: translateX(-100%);
+        -moz-transform: translateX(-100%); /* Change this value based on your needs */
     }
 }
 
@@ -367,27 +394,29 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
         -webkit-transform: translateX(100%);
     }
     100% {
-        -webkit-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%); /* Change this value based on your needs */
     }
 }
 
-@keyframes scroll-left {
-    0% {
-        -moz-transform: translateX(100%);
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
-    }
-    100% {
-        -moz-transform: translateX(-100%);
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-100%);
-    }
+#calendar .fc-h-event .fc-event-main-frame {
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+.fc-h-event .fc-event-title-container {
+    min-width:auto !important;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+    background-color: rgb(255 219 34 / 40%) !important;
 }
 
 #btn-center{
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    border-radius:2px;
+    border:1px solid #bc451d;
 }
 
 .grid-box-sc{
@@ -753,12 +782,17 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     #right-image-animation {
         display: none;
     }
+    #calendar button {
+        display:none;
+    }
 }
+
 @media screen and (max-width:350px) {
     .navbar-dark .navbar-brand img {
         max-height: 50px;
     }
 }
+
 section.todo-outer {
     width: 100%;
     float: left;

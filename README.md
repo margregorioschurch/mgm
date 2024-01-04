@@ -38,8 +38,9 @@
   <p align="center">
     An awesome open-source template to jumpstart your project!
     <br />
-    <a href="https://margregorioschurch.github.io/mgm/"><strong>Visit Website »</strong></a>
+    <a href="https://margregorioschurch.github.io/mgm/"><strong>Website Link 1 (Github) »</strong></a>
     <br />
+    <a href="https://margregorioschurch.vercel.app/"><strong>Website link 2 (Vercel)»</strong></a>
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
     ·
