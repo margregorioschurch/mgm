@@ -9,6 +9,10 @@
     --verse: #ffffff;
     --brown: #bc451d;
     --black: #202020;
+    --text-light: #ffffff; /* Light text color */
+    --text-dark: #333333; /* Dark text color */
+    --background-light: #f8f9fa; /* Light background color */
+    --background-dark: #121212; /* Dark background color */
 }
 
 html {
@@ -34,8 +38,8 @@ body.light-mode {
     font-size:1.05rem;
     font-weight:400;
     line-height:1.4;
-    color: var(--dark);
-    background-color:var(--light);
+    color: var(--text-dark);
+    background-color: var(--background-light);
     -webkit-text-size-adjust:100%;
     -webkit-tap-highlight-color:rgba(0,0,0,0)
 }
@@ -46,8 +50,8 @@ body.dark-mode {
     font-size:1.05rem;
     font-weight:400;
     line-height:1.4;
-    color:var(--light);
-    background-color: var(--dark);
+    color: var(--text-light);
+    background-color: var(--background-dark);
     -webkit-text-size-adjust:100%;
     -webkit-tap-highlight-color:rgba(0,0,0,0)
 }
@@ -60,7 +64,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     font-family:"Alegreya Sans SC",sans-serif;
     font-weight:700;
     line-height:1.2;
-    color: var(--dark)
+    color: var(--text-dark);
 }
 
 .text-justify{
