@@ -4,7 +4,7 @@
 :root {
     --primary: #eaeeb5;
     --light: #ffffff;
-    --dark: #121212;
+    --dark: #1b1b1b;
     --menu: #000000d1;
     --verse: #ffffff;
     --brown: #bc451d;
@@ -59,8 +59,7 @@ body.dark-mode {
 /* Add additional styles for light and dark modes as needed */
 
 .dark-mode-container {
-  color: var(--text-light);
-  background-color: var(--background-dark);
+  background-color: var(--dark);
 }
 
 .dark-mode h1, .dark-mode .h1,
@@ -75,8 +74,7 @@ body.dark-mode {
 /* Additional styles for dark mode container */
 .dark-mode-container {
   /* Add styles for the dark mode container */
-  border: 1px solid var(--text-light);
-  padding: 10px;
+  border: 0.5px solid var(--menu);
 }
 
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
