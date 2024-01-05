@@ -1,12 +1,6 @@
 /********** Template CSS **********/
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
-/*dark theme.css */
-body.dark-mode {
-  background-color: #1e1e1e; /* Dark background color */
-  color: #ffffff; /* Light text color */
-}
-
 :root {
     --primary: #eaeeb5;
     --light: #F1F8FF;
@@ -32,6 +26,26 @@ body {
     -webkit-text-size-adjust:100%;
     -webkit-tap-highlight-color:rgba(0,0,0,0)
 }
+
+/*dark theme.css */
+body.light-mode {
+    margin:0;
+    font-family:"Open Sans",sans-serif;
+    font-size:1.05rem;
+    font-weight:400;
+    line-height:1.4;
+    color: var(--black) !important;
+    background-color:#ffffff;
+    -webkit-text-size-adjust:100%;
+    -webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+
+body.dark-mode {
+  background-color: #1e1e1e !important; /* Dark background color */
+  color:var(--white) !important; /* Light text color */
+}
+
+/* Add additional styles for light and dark modes as needed */
 
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     margin-top:0;
