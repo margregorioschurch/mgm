@@ -29,11 +29,12 @@ document.addEventListener('DOMContentLoaded', function () {
 // script.js
 document.addEventListener('DOMContentLoaded', function () {
   const darkModeToggle = document.getElementById('darkModeToggle');
+  const body = document.body;
 
-  // Set initial mode (false for light mode, true for dark mode)
-  const isDarkMode = false;
+  // Check user's preference in localStorage
+  const isDarkMode = localStorage.getItem('darkMode') === 'true';
 
-  // Set initial mode based on the default
+  // Set initial mode based on user's preference
   setDarkMode(isDarkMode);
 
   // Set the initial state of the checkbox
@@ -43,14 +44,21 @@ document.addEventListener('DOMContentLoaded', function () {
   darkModeToggle.addEventListener('change', function () {
     const newMode = darkModeToggle.checked;
     setDarkMode(newMode);
+    // Save the user's preference in localStorage
+    localStorage.setItem('darkMode', newMode);
   });
 });
 
 function setDarkMode(isDarkMode) {
   const body = document.body;
-  body.classList.toggle('dark-mode', isDarkMode);
-  body.classList.toggle('light-mode', !isDarkMode);
-};
 
+  if (isDarkMode) {
+    body.classList.add('dark-mode');
+    body.classList.remove('light-mode');
+  } else {
+    body.classList.remove('dark-mode');
+    body.classList.add('light-mode');
+  }
+};
 
 //const countEl=document.getElementById("CounterVisitor");function updateVisitCount(){fetch("https://api.countapi.xyz/update/mgm/visits/?amount=1").then(t=>t.json()).then(t=>{countEl.innerHTML=t.value})}updateVisitCount();
