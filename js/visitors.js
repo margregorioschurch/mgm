@@ -36,6 +36,9 @@ document.addEventListener('DOMContentLoaded', function () {
   // Set initial mode
   setDarkMode(isDarkMode);
 
+  // Set the initial state of the checkbox
+  darkModeToggle.checked = isDarkMode;
+
   // Toggle dark mode when the checkbox is clicked
   darkModeToggle.addEventListener('change', function () {
     const newMode = darkModeToggle.checked;
