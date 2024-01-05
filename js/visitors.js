@@ -58,7 +58,39 @@ function setDarkMode(isDarkMode) {
   } else {
     body.classList.remove('dark-mode');
     body.classList.add('light-mode');
-    darkModeContainer.classList.remove('dark-mode-container');
+    
+  }
+};
+
+// script.js
+document.addEventListener('DOMContentLoaded', function () {
+  const darkModeToggle = document.getElementById('darkModeToggle');
+
+  // Set initial mode (false for light mode, true for dark mode)
+  const isDarkMode = false;
+
+  // Set initial mode based on the default
+  setDarkMode(isDarkMode);
+
+  // Set the initial state of the checkbox
+  darkModeToggle.checked = isDarkMode;
+
+  // Toggle dark mode when the checkbox is clicked
+  darkModeToggle.addEventListener('change', function () {
+    const newMode = darkModeToggle.checked;
+    setDarkMode(newMode);
+  });
+});
+
+function setDarkMode(isDarkMode) {
+  const body = document.body;
+  const darkModeContainer = document.getElementById('darkModeContainer');
+
+  body.classList.toggle('dark-mode', isDarkMode);
+  body.classList.toggle('light-mode', !isDarkMode);
+
+  if (darkModeContainer) {
+    darkModeContainer.classList.toggle('dark-mode-container', isDarkMode);
   }
 };
 
