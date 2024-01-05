@@ -32,14 +32,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const body = document.body;
   const darkModeContainer = document.getElementById('darkModeContainer');
 
-  // Check user's preference in localStorage
-  const isDarkMode = localStorage.getItem('darkMode') === 'true';
-
-  // Set initial mode based on user's preference
-  setDarkMode(isDarkMode);
+  // Set initial mode to light mode
+  setDarkMode(false);
 
   // Set the initial state of the checkbox
-  darkModeToggle.checked = isDarkMode;
+  darkModeToggle.checked = false;
 
   // Toggle dark mode when the checkbox is clicked
   darkModeToggle.addEventListener('change', function () {
