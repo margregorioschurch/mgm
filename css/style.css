@@ -58,6 +58,11 @@ body.dark-mode {
 
 /* Add additional styles for light and dark modes as needed */
 
+.dark-mode-container {
+  color: var(--text-light);
+  background-color: var(--background-dark);
+}
+
 .dark-mode h1, .dark-mode .h1,
 .dark-mode h2, .dark-mode .h2,
 .dark-mode h3, .dark-mode .h3,
