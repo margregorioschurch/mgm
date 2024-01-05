@@ -58,7 +58,7 @@ body.dark-mode {
 
 /* Add additional styles for light and dark modes as needed */
 
-.dark-mode-container {
+.dark-mode {
   background-color: var(--dark);
 }
 
