@@ -52,9 +52,11 @@ function setDarkMode(isDarkMode) {
   body.classList.toggle('dark-mode', isDarkMode);
   body.classList.toggle('light-mode', !isDarkMode);
 
-  const darkModeContainers = document.querySelectorAll('.dark-mode-container');
-  darkModeContainers.forEach(container => {
-    container.classList.toggle('dark-mode-container', isDarkMode);
+  // Apply dark mode to specific elements or containers directly
+  // For example, you can select all div elements and toggle a dark mode class
+  const allContainers = document.querySelectorAll('div'); // Adjust the selector based on your structure
+  allContainers.forEach(container => {
+    container.classList.toggle('dark-mode', isDarkMode);
   });
 };
 
