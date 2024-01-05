@@ -25,5 +25,26 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+// script.js
+document.addEventListener('DOMContentLoaded', function () {
+  // Check user's preference in localStorage
+  const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+  // Set initial mode
+  setDarkMode(isDarkMode);
+
+  // Toggle dark mode when the button is clicked
+  document.getElementById('darkModeToggle').addEventListener('click', function () {
+    const newMode = !isDarkMode;
+    setDarkMode(newMode);
+    // Save the user's preference in localStorage
+    localStorage.setItem('darkMode', newMode);
+  });
+});
+
+function setDarkMode(isDarkMode) {
+  const body = document.body;
+  body.classList.toggle('dark-mode', isDarkMode);
+};
 
 //const countEl=document.getElementById("CounterVisitor");function updateVisitCount(){fetch("https://api.countapi.xyz/update/mgm/visits/?amount=1").then(t=>t.json()).then(t=>{countEl.innerHTML=t.value})}updateVisitCount();
