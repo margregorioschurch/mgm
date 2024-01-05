@@ -11,7 +11,7 @@
     --black: #202020;
     --text-light: #ffffff; /* Light text color */
     --text-dark: #333333; /* Dark text color */
-    --background-light: #f8f9fa; /* Light background color */
+    --background-light: #ffffff; /* Light background color */
     --background-dark: #121212; /* Dark background color */
 }
 
@@ -69,7 +69,14 @@ body.dark-mode {
 .dark-mode h4, .dark-mode .h4,
 .dark-mode h5, .dark-mode .h5,
 .dark-mode h6, .dark-mode .h6 {
-  color: var(--text-light) !important;
+  color: var(--text-light);
+}
+
+/* Additional styles for dark mode container */
+.dark-mode-container {
+  /* Add styles for the dark mode container */
+  border: 1px solid var(--text-light);
+  padding: 10px;
 }
 
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
