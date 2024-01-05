@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Check user's preference in localStorage
   const isDarkMode = localStorage.getItem('darkMode') === 'true';
 
-  // Set initial mode
+  // Set initial mode based on user's preference
   setDarkMode(isDarkMode);
 
   // Set the initial state of the checkbox
