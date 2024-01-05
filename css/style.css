@@ -58,6 +58,15 @@ body.dark-mode {
 
 /* Add additional styles for light and dark modes as needed */
 
+.dark-mode h1, .dark-mode .h1,
+.dark-mode h2, .dark-mode .h2,
+.dark-mode h3, .dark-mode .h3,
+.dark-mode h4, .dark-mode .h4,
+.dark-mode h5, .dark-mode .h5,
+.dark-mode h6, .dark-mode .h6 {
+  color: var(--text-light) !important;
+}
+
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     margin-top:0;
     margin-bottom:.5rem;
@@ -311,7 +320,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 
 /*** Service ***/
 .service-item {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    box-shadow: 0px 0px 10px 5px rgb(0 0 0 / 6%);
     transition:ease-in .3s;
 }
 
