@@ -29,42 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
 // script.js
 document.addEventListener('DOMContentLoaded', function () {
   const darkModeToggle = document.getElementById('darkModeToggle');
-  const body = document.body;
-  const darkModeContainer = document.getElementById('darkModeContainer');
-
-  // Set initial mode to light mode
-  setDarkMode(false);
-
-  // Set the initial state of the checkbox
-  darkModeToggle.checked = false;
-
-  // Toggle dark mode when the checkbox is clicked
-  darkModeToggle.addEventListener('change', function () {
-    const newMode = darkModeToggle.checked;
-    setDarkMode(newMode);
-    // Save the user's preference in localStorage
-    localStorage.setItem('darkMode', newMode);
-  });
-});
-
-function setDarkMode(isDarkMode) {
-  const body = document.body;
-  const darkModeContainer = document.getElementById('darkModeContainer');
-
-  if (isDarkMode) {
-    body.classList.add('dark-mode');
-    body.classList.remove('light-mode');
-    darkModeContainer.classList.add('dark-mode-container');
-  } else {
-    body.classList.remove('dark-mode');
-    body.classList.add('light-mode');
-    
-  }
-};
-
-// script.js
-document.addEventListener('DOMContentLoaded', function () {
-  const darkModeToggle = document.getElementById('darkModeToggle');
 
   // Set initial mode (false for light mode, true for dark mode)
   const isDarkMode = false;
@@ -84,14 +48,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function setDarkMode(isDarkMode) {
   const body = document.body;
-  const darkModeContainer = document.getElementById('darkModeContainer');
 
   body.classList.toggle('dark-mode', isDarkMode);
   body.classList.toggle('light-mode', !isDarkMode);
 
-  if (darkModeContainer) {
-    darkModeContainer.classList.toggle('dark-mode-container', isDarkMode);
-  }
+  const darkModeContainers = document.querySelectorAll('.dark-mode-container');
+  darkModeContainers.forEach(container => {
+    container.classList.toggle('dark-mode-container', isDarkMode);
+  });
 };
 
 //const countEl=document.getElementById("CounterVisitor");function updateVisitCount(){fetch("https://api.countapi.xyz/update/mgm/visits/?amount=1").then(t=>t.json()).then(t=>{countEl.innerHTML=t.value})}updateVisitCount();
