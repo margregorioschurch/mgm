@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
   const darkModeToggle = document.getElementById('darkModeToggle');
   const body = document.body;
+  const darkModeContainer = document.getElementById('darkModeContainer');
 
   // Check user's preference in localStorage
   const isDarkMode = localStorage.getItem('darkMode') === 'true';
@@ -51,13 +52,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function setDarkMode(isDarkMode) {
   const body = document.body;
+  const darkModeContainer = document.getElementById('darkModeContainer');
 
   if (isDarkMode) {
     body.classList.add('dark-mode');
     body.classList.remove('light-mode');
+    darkModeContainer.classList.add('dark-mode-container');
   } else {
     body.classList.remove('dark-mode');
     body.classList.add('light-mode');
+    darkModeContainer.classList.remove('dark-mode-container');
   }
 };
 
