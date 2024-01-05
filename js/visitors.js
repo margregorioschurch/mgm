@@ -25,17 +25,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
 // script.js
 document.addEventListener('DOMContentLoaded', function () {
+  const darkModeToggle = document.getElementById('darkModeToggle');
+
   // Check user's preference in localStorage
   const isDarkMode = localStorage.getItem('darkMode') === 'true';
 
   // Set initial mode
   setDarkMode(isDarkMode);
 
-  // Toggle dark mode when the button is clicked
-  document.getElementById('darkModeToggle').addEventListener('click', function () {
-    const newMode = !isDarkMode;
+  // Toggle dark mode when the checkbox is clicked
+  darkModeToggle.addEventListener('change', function () {
+    const newMode = darkModeToggle.checked;
     setDarkMode(newMode);
     // Save the user's preference in localStorage
     localStorage.setItem('darkMode', newMode);
@@ -45,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function setDarkMode(isDarkMode) {
   const body = document.body;
   body.classList.toggle('dark-mode', isDarkMode);
+  body.classList.toggle('light-mode', !isDarkMode);
 };
 
 //const countEl=document.getElementById("CounterVisitor");function updateVisitCount(){fetch("https://api.countapi.xyz/update/mgm/visits/?amount=1").then(t=>t.json()).then(t=>{countEl.innerHTML=t.value})}updateVisitCount();
