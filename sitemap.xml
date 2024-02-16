@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!--  created with sitemap generator https://octopus.do  -->
+
+    <url>
+        <loc>https://margregorioschurch.vercel.app</loc>
+        <lastmod>2024-02-16</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://margregorioschurch.vercel.app/events.html</loc>
+        <lastmod>2024-02-16</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://margregorioschurch.vercel.app/about.html</loc>
+        <lastmod>2024-02-16</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://margregorioschurch.vercel.app/contact.html</loc>
+        <lastmod>2024-02-16</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://margregorioschurch.vercel.app/booking.html</loc>
+        <lastmod>2024-02-16</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://margregorioschurch.vercel.app/index.html</loc>
+        <lastmod>2024-02-16</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+</urlset>
