@@ -325,7 +325,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 
 /*** Service ***/
 .service-item {
-    box-shadow: 0px 0px 10px 5px rgb(0 0 0 / 6%);
+    box-shadow: 0px 0px 0px 3px rgb(235 190 175 / 20%);
     transition:ease-in .3s;
 }
 
@@ -603,7 +603,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 
 /*** Team ***/
 .team-item {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    box-shadow: 0px 0px 0px 3px rgb(235 190 175 / 20%);
     height: calc(100% - 38px);
     transition: .5s;
 }
