@@ -33,6 +33,17 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 	<link href="css/style1.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+    // Check if the URL has a .html extension
+    if (window.location.pathname.endsWith('.html')) {
+    // Remove the .html extension and update the URL
+    var newPath = window.location.pathname.replace('.html', '');
+    window.history.replaceState({}, document.title, newPath);
+    }
+    });
+    </script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js'></script>
 </head>
 
