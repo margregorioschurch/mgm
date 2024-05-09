@@ -327,6 +327,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 .service-item {
     box-shadow: 0px 0px 0px 3px rgb(235 190 175 / 20%);
     transition:ease-in .3s;
+    min-height: 525px;
 }
 
 .service-item:hover {
