@@ -365,15 +365,16 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 }
 
 #calendar h2 {
-    color: #fea116;
+    color: #FEA116;
     font-size: 1.3rem;
     text-align: center;
     text-shadow: 0.5px 0.5px 0px #2c3e508a;
 }
 
 #calendar a {
-    color:#bc451d !important;
+    color:var(--text-dark) !important;
     font-size: large;
+    font-weight: 700;
 }
 
 #calendar button {
@@ -454,7 +455,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 }
 
 .fc .fc-daygrid-day.fc-day-today {
-    background-color: var(--fc-event-bg-color) !important;
+    background-color: #FEA116 !important;
 }
 
 #btn-center{
@@ -817,7 +818,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     color:#ffffff !important;
     }
     #calendar h2 {
-    color: #fea116;
+    color: #FEA116;
     font-size: 1rem;
     text-align: center;
     text-shadow: 0.5px 0.5px 0px #2c3e508a;
