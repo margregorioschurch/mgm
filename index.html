@@ -38,14 +38,19 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
     $(document).ready(function() {
-    // Check if the URL has a .html extension
-    if (window.location.pathname.endsWith('.html')) {
-    // Remove the .html extension and update the URL
-    var newPath = window.location.pathname.replace('.html', '');
-    window.history.replaceState({}, document.title, newPath);
-    }
+        // Check if the URL has a .html extension
+        if (window.location.pathname.endsWith('.html')) {
+            // Remove the .html extension and update the URL
+            var newPath = window.location.pathname.replace('.html', '');
+            
+            // Ensure the new URL doesn't cause issues (for example, keep /index)
+            if (newPath !== '') {
+                window.history.replaceState({}, document.title, newPath);
+            }
+        }
     });
     </script>
+    
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js'></script>
     <!-- <script>
 
@@ -161,7 +166,7 @@
                                 <!-- <i class="fa fa-3x fa-cross text-primary mb-4"></i> -->
                                 <h5 class="text-primary">St. Gregorios</h5>
                                 <p class="text-justify">St. Geevarghese Mor Gregorios, also referred to as Parumala Thirumeni, served as a Metropolitan of the Malankara Church from 15 June 1848 to 2 November 1902. Mar Gregorios became the first saint from India to be recognized by the Christian church when the Malankara Orthodox Syrian Church declared him a saint in 1947. He was the first person of Indian descent to be recognised as a saint by the Syriac Orthodox Church in November 1987.</p>
-                                <a id="btn-center" class="btn-primary py-1 px-3 mb-5" href="https://mosc.in/saints/st-gregorios-of-parumala-metropolitan-geevarghese-mar-gregorios" target="_blank" rel="noreferrer">Read more <i class="fa fa-arrow-right"></i> </a>
+                                <a id="btn-center" class="btn-primary py-1 px-3 mb-5" href="https://mosc.in/saints/st-gregorios-of-parumala-metropolitan-geevarghese-mar-gregorios" target="_blank" rel="noopener">Read more <i class="fa fa-arrow-right"></i> </a>
                             </div>
                         </div>
                     </div>
@@ -172,7 +177,7 @@
                                 <!-- <i class="fa fa-3x fa-cross text-primary mb-4"></i> -->
                                 <h5 class="text-primary">St. Thomas</h5>
                                 <p class="text-justify">St. Thomas, one of Jesus Christ's twelve apostles and a follower, arrived in India in AD 52. In AD 52, a disciple of Jesus Christ named St. Thomas travelled to India where he preached the gospel and founded seven churches. He planted 7 churches and preached the gospel. The Disciple of Christ, Mar Thomasleeha, is thought to have preached the gospel in Kerala in the first century A.D., which is when the Syrian Christian churches in Kerala first appeared.</p>
-                                <a id="btn-center" class="btn-primary py-1 px-3 mb-5" href="https://ml.wikipedia.org/wiki/%E0%B4%A4%E0%B5%8B%E0%B4%AE%E0%B4%BE%E0%B4%B6%E0%B5%8D%E0%B4%B2%E0%B5%80%E0%B4%B9%E0%B4%BE" target="_blank" rel="noreferrer">Read more <i class="fa fa-arrow-right"></i> </a>
+                                <a id="btn-center" class="btn-primary py-1 px-3 mb-5" href="https://ml.wikipedia.org/wiki/%E0%B4%A4%E0%B5%8B%E0%B4%AE%E0%B4%BE%E0%B4%B6%E0%B5%8D%E0%B4%B2%E0%B5%80%E0%B4%B9%E0%B4%BE" target="_blank" rel="noopener">Read more <i class="fa fa-arrow-right"></i> </a>
                             </div>
                         </div>
                     </div>
@@ -183,7 +188,7 @@
                                 <!-- <i class="fa fa-3x fa-cross text-primary mb-4"></i> -->
                                 <h5 class="text-primary">St. Geevarghese</h5>
                                 <p class="text-justify">St. George, a Christian martyr and saint, lived in the third century. He was a person who lived from 275 to 281 AD and died on April 22, 303 AD. According to hereditary, he was a Roman soldier fighting for the Diocletian Emperor. At the time, he was also a priest. The saint's fame was enhanced by the legend surrounding his conflict with the enormous snake. He is revered as one of the 14 Auxiliary Saints and is the patron saint of Georgia and England (Holy Helpers).</p>
-                                <a id="btn-center" class="btn-primary py-1 px-3 mb-5" href="https://ml.wikipedia.org/wiki/%E0%B4%B5%E0%B4%BF%E0%B4%B6%E0%B5%81%E0%B4%A6%E0%B5%8D%E0%B4%A7_%E0%B4%97%E0%B5%80%E0%B4%B5%E0%B5%BC%E0%B4%97%E0%B5%80%E0%B4%B8%E0%B5%8D" target="_blank" rel="noreferrer">Read more <i class="fa fa-arrow-right"></i> </a>
+                                <a id="btn-center" class="btn-primary py-1 px-3 mb-5" href="https://ml.wikipedia.org/wiki/%E0%B4%B5%E0%B4%BF%E0%B4%B6%E0%B5%81%E0%B4%A6%E0%B5%8D%E0%B4%A7_%E0%B4%97%E0%B5%80%E0%B4%B5%E0%B5%BC%E0%B4%97%E0%B5%80%E0%B4%B8%E0%B5%8D" target="_blank" rel="noopener">Read more <i class="fa fa-arrow-right"></i> </a>
                             </div>
                         </div>
                     </div>
@@ -265,7 +270,7 @@
             <div class="row g-0">
                 <div class="col-md-12">
                     <div class="video">
-                        <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/pQMWk4xqUAA" data-bs-target="#videoModal">
+                        <button type="button" title="youtube" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/pQMWk4xqUAA" data-bs-target="#videoModal">
                             <span></span>
                         </button>
                     </div>
@@ -304,8 +309,8 @@
                 <div id='calendar' class="row col-xl-auto mt-3 p-1"></div>
                 <br>
                 <div class="row row-cols-auto text-center">
-                <a id="btn-center" class="btn-primary py-1 px-3 mb-3" href="https://mosc.in/uploads/2023/12/panjangom_24_small-size.pdf" target="_blank" rel="noreferrer"><i class="fa fa-download"></i> Download Calendar</a>
-                <a id="btn-center" class="btn-primary py-1 px-3 mb-3" href="https://mosc.in/downloads/kalpana" target="_blank" rel="noreferrer"><i class="fa fa-download"></i> Download Kalpana</a>   
+                <a id="btn-center" class="btn-primary py-1 px-3 mb-3" href="https://mosc.in/uploads/2023/12/panjangom_24_small-size.pdf" target="_blank" rel="noopener"><i class="fa fa-download"></i> Download Calendar</a>
+                <a id="btn-center" class="btn-primary py-1 px-3 mb-3" href="https://mosc.in/downloads/kalpana" target="_blank" rel="noopener"><i class="fa fa-download"></i> Download Kalpana</a>   
                 </div>
                 <!-- Calendar Ends -->
 
@@ -579,7 +584,7 @@
                             <h5 class="mb-0">Fr.Sunil Joseph</h5>
                             <small>Clergy</small>
                             <div class="d-flex justify-content-center mt-3">
-                                <a class="btn btn-square btn-primary mx-1" href="https://www.facebook.com/frsunil.joseph.7" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href="https://www.facebook.com/frsunil.joseph.7" rel="noopener" target="_blank"><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-whatsapp"></i></a>
                                 <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-instagram"></i></a>
                             </div>
@@ -646,7 +651,7 @@
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <h5 id="newQuote0" class="mb-1"><strong>John 3:16 </strong>- For this is the way God loved the world: He gave his one and only Son, so that everyone who believes in him will not perish but have eternal life.</h5>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/806181.png" style="width: 50px; height: 50px;">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" title="Bible" src="img/806181.png" style="width: 50px; height: 50px;">
                             <div class="ps-3">
                                 <!-- <h5 class="mb-1">Chapter</h5> -->
                                 <small>Holy Bible</small>
@@ -657,7 +662,7 @@
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <h5 id="newQuote1" class="mb-1"><strong>Deuteronomy 28:11 </strong>- The Lord will greatly multiply your children, the offspring of your livestock, and the produce of your soil in the land that he promised your ancestors he would give you.</h5>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/806181.png" style="width: 50px; height: 50px;">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" title="Bible" src="img/806181.png" style="width: 50px; height: 50px;">
                             <div class="ps-3">
                                 <!-- <h5 class="mb-1">Chapter</h5> -->
                                 <small>Holy Bible</small>
@@ -669,7 +674,7 @@
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <h5 id="newQuote2" class="mb-1"><strong>Ezekiel 7:14 </strong>- “They have blown the trumpet and everyone is ready, but no one goes to battle, because my anger is against their whole crowd.</h5>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/806181.png" style="width: 50px; height: 50px;">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" title="Bible" src="img/806181.png" style="width: 50px; height: 50px;">
                             <div class="ps-3">
                                 <!-- <h5 class="mb-1">Chapter</h5> -->
                                 <small>Holy Bible</small>
@@ -702,7 +707,7 @@
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <h5 id="newQuote3" class="mb-1"><strong>Psalms 119:69 </strong>- Arrogant people smear my reputation with lies, but I observe your precepts with all my heart.</h5>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/806181.png" style="width: 50px; height: 50px;">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" title="Bible" src="img/806181.png" style="width: 50px; height: 50px;">
                             <div class="ps-3">
                                 <!-- <h5 class="mb-1">Chapter</h5> -->
                                 <small>Holy Bible</small>
@@ -772,15 +777,15 @@
 			
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
-                        <p class="mb-2 btn-link"><i class="fa fa-map-marker-alt me-3"></i><a class="text-light" href="https://goo.gl/maps/bPcQHy4m9zeorK3y9" target="_blank">Thottapuzha, Eraviperoor, Kerala 689542</a></p>
+                        <p class="mb-2 btn-link"><i class="fa fa-map-marker-alt me-3"></i><a class="text-light" href="https://goo.gl/maps/bPcQHy4m9zeorK3y9" rel="noopener" target="_blank">Thottapuzha, Eraviperoor, Kerala 689542</a></p>
                         <p class="mb-2 btn-link"><i class="fa fa-phone-square me-3"></i><a class="text-light" href="tel:0469 2668858">0469-2668858</a></p>
                         <p class="mb-2 btn-link"><i class="fa fa-envelope me-3"></i><a class="text-light" href="mailto:margregorioschurch71@gmail.com">margregorioschurch71@gmail.com</a></p>
                        
 		     <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social text-primary" href="#"><i class="fab fa-whatsapp"></i></a>
-                            <a class="btn btn-outline-light btn-social text-primary" href="https://www.facebook.com/groups/205694423941111" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social text-primary" href="https://www.youtube.com/@anugrahaweddingstudio8764" target="_blank"><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social text-primary" href="https://directory.mosc.in/parishes/mar-gregorios-orthodox-church-49/" target="_blank"><i class="fab fa-internet-explorer"></i></a>
+                            <a class="btn btn-outline-light btn-social text-primary" href="#" title="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                            <a class="btn btn-outline-light btn-social text-primary" href="https://www.facebook.com/groups/205694423941111" rel="noopener" title="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social text-primary" href="https://www.youtube.com/@anugrahaweddingstudio8764" rel="noopener" title="youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social text-primary" href="https://directory.mosc.in/parishes/mar-gregorios-orthodox-church-49/" rel="noopener" title="mosc" target="_blank"><i class="fab fa-internet-explorer"></i></a>
                         </div>
                     </div>
 			
@@ -836,7 +841,7 @@
         </div>
         <!-- Footer End -->
 	<!--Counter-->
-         <!--<div class="counter">
+         <!--<div class="counter">-->
             	<!--<div class="head"><span class="fa fa-globe" id="visitor-globe"></span>&nbsp;Visitors Counter</div>
 		<div class="count" id="CounterVisitor">0</div>-->
 		 
