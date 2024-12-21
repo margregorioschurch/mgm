@@ -25,6 +25,46 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+// Dark Theme script.js
+document.addEventListener('DOMContentLoaded', function () {
+  const darkModeToggle = document.getElementById('darkModeToggle');
+
+  // Check the saved theme in localStorage
+  const savedMode = localStorage.getItem('darkMode');
+  const isDarkMode = savedMode ? JSON.parse(savedMode) : false; // Default to false if no saved mode
+
+  // Set initial mode based on the saved preference
+  setDarkMode(isDarkMode);
+
+  // Set the initial state of the checkbox
+  if (darkModeToggle) {
+    darkModeToggle.checked = isDarkMode;
+
+    // Toggle dark mode when the checkbox is clicked
+    darkModeToggle.addEventListener('change', function () {
+      const newMode = darkModeToggle.checked;
+      setDarkMode(newMode);
+
+      // Save the preference in localStorage
+      localStorage.setItem('darkMode', JSON.stringify(newMode));
+    });
+  }
+});
+
+function setDarkMode(isDarkMode) {
+  const body = document.body;
+
+  // Apply the dark mode or light mode class to the body element
+  body.classList.toggle('dark-mode', isDarkMode);
+  body.classList.toggle('light-mode', !isDarkMode);
+
+  // Apply dark mode to other containers if necessary
+  const allContainers = document.querySelectorAll('.container, .header, .footer'); // Adjust based on your needs
+  allContainers.forEach(container => {
+    container.classList.toggle('dark-mode', isDarkMode);
+  });
+};
 // Debug script.js
 var h = document.getElementById("tsparticles")
   , i = performance.timing;
@@ -69,45 +109,5 @@ function k(a) {
 }
 console.log("> Cookie-Enabled:", navigator.cookieEnabled, "\n", f),
 g();
-// Dark Theme script.js
-document.addEventListener('DOMContentLoaded', function () {
-  const darkModeToggle = document.getElementById('darkModeToggle');
-
-  // Check the saved theme in localStorage
-  const savedMode = localStorage.getItem('darkMode');
-  const isDarkMode = savedMode ? JSON.parse(savedMode) : false; // Default to false if no saved mode
-
-  // Set initial mode based on the saved preference
-  setDarkMode(isDarkMode);
-
-  // Set the initial state of the checkbox
-  if (darkModeToggle) {
-    darkModeToggle.checked = isDarkMode;
-
-    // Toggle dark mode when the checkbox is clicked
-    darkModeToggle.addEventListener('change', function () {
-      const newMode = darkModeToggle.checked;
-      setDarkMode(newMode);
-
-      // Save the preference in localStorage
-      localStorage.setItem('darkMode', JSON.stringify(newMode));
-    });
-  }
-});
-
-function setDarkMode(isDarkMode) {
-  const body = document.body;
-
-  // Apply the dark mode or light mode class to the body element
-  body.classList.toggle('dark-mode', isDarkMode);
-  body.classList.toggle('light-mode', !isDarkMode);
-
-  // Apply dark mode to other containers if necessary
-  const allContainers = document.querySelectorAll('.container, .header, .footer'); // Adjust based on your needs
-  allContainers.forEach(container => {
-    container.classList.toggle('dark-mode', isDarkMode);
-  });
-}
-
 
 //const countEl=document.getElementById("CounterVisitor");function updateVisitCount(){fetch("https://api.countapi.xyz/update/mgm/visits/?amount=1").then(t=>t.json()).then(t=>{countEl.innerHTML=t.value})}updateVisitCount();
