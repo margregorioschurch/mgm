@@ -25,8 +25,51 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
-
-// script.js
+// Debug script.js
+var h = document.getElementById("tsparticles")
+  , i = performance.timing;
+window.addEventListener("load", function() {
+    console.log("\n> MGM, Thottapuzha is successfully loaded in", Math.round(i.loadEventEnd - i.responseEnd) / 1e11, "sec."),
+    window.setTimeout( () => {
+        h.style.display = "none"
+    }
+    , 1e3)
+}, a());
+var b = new Date
+  , c = b.toLocaleString();
+const d = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+  , e = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+console.log(">", navigator.userAgent, "\n>", c, "\nResolution :", d, "*", e);
+let f = document.cookie;
+function g() {
+    navigator.geolocation ? navigator.geolocation.getCurrentPosition(k, j) : console.error("Geolocation is not supported by this browser.")
+}
+function j(a) {
+    let b;
+    switch (a.code) {
+    case a.PERMISSION_DENIED:
+        b = "User denied the request for Geolocation.";
+        break;
+    case a.POSITION_UNAVAILABLE:
+        b = "Location information is unavailable.";
+        break;
+    case a.TIMEOUT:
+        b = "The request to get user location timed out.";
+        break;
+    case a.UNKNOWN_ERROR:
+    default:
+        b = "An unknown error occurred."
+    }
+    console.error("Error occurred: " + b)
+}
+function k(a) {
+    var b = a.coords.latitude
+      , c = a.coords.longitude;
+    console.log("> User-location %c\nLatitude: " + b + "\nLongitude: " + c, "background:#000;color:#16d900;border-radius:3px")
+}
+console.log("> Cookie-Enabled:", navigator.cookieEnabled, "\n", f),
+g();
+// Dark Theme script.js
 document.addEventListener('DOMContentLoaded', function () {
   const darkModeToggle = document.getElementById('darkModeToggle');
 
