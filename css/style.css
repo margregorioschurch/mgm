@@ -467,6 +467,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     margin-right: auto;
     border-radius:2px;
     border:1px solid #bc451d;
+    color:var(--brown);
 }
 
 .grid-box-sc{
@@ -483,6 +484,10 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 }
 
 /*** Youtube Video ***/
+.modal-content {
+    background-color:#000000d1;
+}
+
 .video {
     position: relative;
     height: 100%;
