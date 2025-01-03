@@ -359,11 +359,16 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 
 #calendar {
     max-width: 1100px;
-    min-height:430px;
-    margin:20px auto;
-    background: #feffeb;
+    min-height: 430px;
+    margin: 20px auto;
+    background: url(../img/World-Earth-PNG-Photos.png) no-repeat;
+    background-size: contain;
     border-radius: 2px;
-    border:1px solid #bc451d;
+    background-attachment: fixed;
+}
+
+.fc-view-harness fc-view-harness-active {
+    background: #b7d6de9e;
 }
 
 #calendar h2 {
