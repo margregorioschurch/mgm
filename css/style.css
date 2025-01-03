@@ -365,9 +365,10 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     background-size: contain;
     border-radius: 2px;
     background-attachment: fixed;
+    background-position: center;
 }
 
-.fc-view-harness fc-view-harness-active {
+fc-view-harness fc-view-harness-active {
     background: #b7d6de9e;
 }
 
