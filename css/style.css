@@ -463,7 +463,7 @@ fc-view-harness fc-view-harness-active {
 }
 
 .fc .fc-daygrid-day.fc-day-today {
-    background-color: #FEA116 !important;
+    background-color: #fea116b8 !important;
     box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.1);
 }
 
