@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
     var calendarEl = document.getElementById('calendar');
     if (!calendarEl) {
@@ -30,135 +31,135 @@ document.addEventListener('DOMContentLoaded', function () {
         // January
         {
             title: 'New Year (First Sunday after Christmas)',
-            day: '01-01'
+            month: 1, day: 1
         },
         {
             title: 'Circumcision of our Lord, Feast of St Basil and St Gregory & All the Holy Fathers',
-            day: '01-01'
+            month: 1, day: 1
         },
         {
             title: 'Feast of St. Sylvester the Pope of Rome',
-            day: '01-02'
+            month: 1, day: 2
         },
         {
             title: 'Feast of St. John The Apostle and Evangelist',
-            day: '01-02'
+            month: 1, day: 2
         },
         {
             title: 'Commemoration of HH Mar Baselios Geevarghese II Catholicos (Devalokam Aramana)',
-            day: '01-03'
+            month: 1, day: 3
         },
         {
             title: 'Oath of Koonan Cross',
-            day: '01-03'
+            month: 1, day: 3
         },
         {
             title: 'Feast of Prophet Malachi',
-            day: '01-03'
+            month: 1, day: 3
         },
         {
             title: 'Synaxis of the Seventy Disciples of the Lord',
-            day: '01-04'
+            month: 1, day: 4
         },
         {
             title: 'Epiphany/Danaha, Baptism of our Lord Jesus Christ',
-            day: '01-06'
+            month: 1, day: 6
         },
         {
             title: 'Feast Commemorating the Beheading of St John the Baptist',
-            day: '01-07'
+            month: 1, day: 7
         },
         {
             title: 'First Sunday after Epiphany',
-            day: '01-07'
+            month: 1, day: 7
         },
         {
             title: 'Second Sunday after Christmas',
-            day: '01-07'
+            month: 1, day: 7
         },
         {
             title: 'Feast Commemorating the Martyrdom of St. Stephen, the Head of the Deacons and the First Among Martyrs',
-            day: '01-08'
+            month: 1, day: 8
         },
         {
             title: 'Feast of St. Gregory of Nyssa',
-            day: '01-10'
+            month: 1, day: 10
         },
         {
             title: 'Feast of St. Theodosius of Antioch',
-            day: '01-11'
+            month: 1, day: 11
         },
         {
             title: 'Second Sunday after Epiphany',
-            day: '01-14'
+            month: 1, day: 14
         },
         {
             title: 'Feast of St. Mary for Seeds',
-            day: '01-15'
+            month: 1, day: 15
         },
         {
             title: 'Commemoration of Paul the Monk',
-            day: '01-15'
+            month: 1, day: 15
         },
         {
             title: 'Feast of St Anthony the Great',
-            day: '01-17'
+            month: 1, day: 17
         },
         {
             title: 'Feast of St. Samuel, St. Simon, St. Antonios, Head of the Ascetics',
-            day: '01-18'
+            month: 1, day: 18
         },
         {
             title: 'Commemoration of Michael Mar Dionysius Metropolitan (Panampady)',
-            day: '01-18'
+            month: 1, day: 18
         },
         {
             title: 'Feast of St. Cyril of Alexandria',
-            day: '01-18'
+            month: 1, day: 18
         },
         {
             title: 'Feast of St Athanasius the Great the Patriarch of Alexandria',
-            day: '01-18'
+            month: 1, day: 18
         },
         {
             title: 'Feast of St. Shemoun (Simeon) of Qartmin',
-            day: '01-19'
+            month: 1, day: 19
         },
         {
             title: 'Sunday before Three day Lent (Pethurtho of Nineveh Fast)',
-            day: '01-21'
+            month: 1, day: 21
         },
         {
             title: 'Third Sunday after Epiphany',
-            day: '01-21'
+            month: 1, day: 21
         },
         {
             title: 'Commemoration of HG Philipose Mar Eusebius (St. Basil Dayara, Pathanamthitta)',
-            day: '01-21'
+            month: 1, day: 21
         },
         {
             title: 'Commemoration of St John Chrysostom (Golden-mouthed)',
-            day: '01-21'
+            month: 1, day: 21
         },
         {
             title: 'Feast of St. Agnes of Rome',
-            day: '01-21'
+            month: 1, day: 21
         },
         {
             title: 'Feast of St. Anastasia the Patrician of Alexandria',
-            day: '01-21'
+            month: 1, day: 21
         },
         {
             title: 'Monday of Three day Lent',
-            day: '01-22'
+            month: 1, day: 22
         },
         {
             title: 'Feast of St. Clement, Pope of Rome',
-            day: '01-22'
+            month: 1, day: 22
         },
         {
             title: 'Feast of St. Timothy',
-            day: '01-22'
+            month: 1, day: 22
         },
         {
             title: 'Tuesday of Three day Lent',
