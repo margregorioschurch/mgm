@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     var calendarEl = document.getElementById('calendar');
     if (!calendarEl) {
@@ -10,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var yyyy = today.getFullYear();
     var mm = String(today.getMonth() + 1).padStart(2, '0');
     var dd = String(today.getDate()).padStart(2, '0');
-    var todayFormatted = yyyy + '-' + mm + '-' + dd;
+    var todayFormatted = `${yyyy}-${mm}-${dd}`;
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
@@ -25,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var startYear = yyyy - 1;
     var endYear = yyyy + 1;
-
     // Define an array of event details
     var events = [
         // January
@@ -1231,21 +1229,18 @@ document.addEventListener('DOMContentLoaded', function () {
         // end of var events
     ];
 
-for (var year = startYear; year <= endYear; year++) {
-        events.forEach(function (eventDetail) {
-            var dateParts = eventDetail.day.split('-');
-            var eventDate = new Date(year, parseInt(dateParts[0]) - 1, parseInt(dateParts[1])); // Ensure correct date parsing
-            
-            if (!isNaN(eventDate.getTime())) { // Ensure valid date
-                var dayOfWeek = eventDate.toLocaleDateString('en-US', { weekday: 'long' });
-                var event = {
-                    title: eventDetail.title + " (" + dayOfWeek + ")",
-                    start: eventDate.toISOString().split('T')[0], // Ensure YYYY-MM-DD format
+for (let year = startYear; year <= endYear; year++) {
+        events.forEach(({ title, month, day }) => {
+            let eventDate = new Date(year, month - 1, day);
+            if (!isNaN(eventDate.getTime())) {
+                let dayOfWeek = eventDate.toLocaleDateString('en-US', { weekday: 'long' });
+                calendar.addEvent({
+                    title: `${title} (${dayOfWeek})`,
+                    start: eventDate.toISOString().split('T')[0],
                     allDay: true
-                };
-                calendar.addEvent(event);
+                });
             } else {
-                console.error("Invalid date for event:", eventDetail.title, "on", eventDate);
+                console.error("Invalid date for event:", title, "on", eventDate);
             }
         });
     }
