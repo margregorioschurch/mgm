@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var calendarEl = document.getElementById('calendar');
     if (!calendarEl) {
         console.error("Calendar element not found. Aborting calendar initialization.");
@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     var today = new Date();
-    var yyyy = today.getFullYear(); // Corrected variable name
+    var yyyy = today.getFullYear();
     var mm = String(today.getMonth() + 1).padStart(2, '0');
     var dd = String(today.getDate()).padStart(2, '0');
     var todayFormatted = yyyy + '-' + mm + '-' + dd;
@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var startYear = yyyy - 1;
     var endYear = yyyy + 1;
+
 
     // Define an array of event details
     var events = [
@@ -1231,17 +1232,21 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
     
 for (var year = startYear; year <= endYear; year++) {
-        events.forEach(function(eventDetail) {
+        events.forEach(function (eventDetail) {
             var eventDate = year + '-' + eventDetail.day;
-            var dateObj = new Date(eventDate); // Create a Date object
-            var dayOfWeek = dateObj.toLocaleDateString('en-US', { weekday: 'long' }); // Get day of the week
-
-            var event = {
-                title: eventDetail.title + " (" + dayOfWeek + ")", // Add day of the week to title (optional)
-                start: eventDate,
-                allDay: true
-            };
-            calendar.addEvent(event);
+            var dateObj = new Date(eventDate);
+            
+            if (!isNaN(dateObj.getTime())) { // Ensure valid date
+                var dayOfWeek = dateObj.toLocaleDateString('en-US', { weekday: 'long' });
+                var event = {
+                    title: eventDetail.title + " (" + dayOfWeek + ")",
+                    start: eventDate,
+                    allDay: true
+                };
+                calendar.addEvent(event);
+            } else {
+                console.error("Invalid date for event:", eventDetail.title, "on", eventDate);
+            }
         });
     }
 
