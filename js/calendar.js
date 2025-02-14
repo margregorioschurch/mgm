@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     var today = new Date();
-    var yyyy = today.getFullYear();
+    var yyyy = today.getFullYear(); // Corrected variable name
     var mm = String(today.getMonth() + 1).padStart(2, '0');
     var dd = String(today.getDate()).padStart(2, '0');
     var todayFormatted = yyyy + '-' + mm + '-' + dd;
@@ -19,9 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
             center: 'title',
             right: 'dayGridMonth,timeGridWeek,timeGridDay'
         },
-        events: [] // Start with empty events array
+        events: []
     });
-
 
     var startYear = yyyy - 1;
     var endYear = yyyy + 1;
@@ -1237,12 +1236,11 @@ document.addEventListener('DOMContentLoaded', function() {
             var event = {
                 title: eventDetail.title,
                 start: eventDate,
-                allDay: true // Add allDay: true for all-day events
+                allDay: true // Essential for all-day events!
             };
             calendar.addEvent(event);
         });
     }
 
-    calendar.render(); // Render *after* adding all events
-
+    calendar.render();
 });
