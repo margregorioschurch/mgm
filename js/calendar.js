@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var startYear = yyyy - 1;
     var endYear = yyyy + 1;
 
-
     // Define an array of event details
     var events = [
         // January
@@ -1230,17 +1229,17 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         // end of var events
     ];
-    
+
 for (var year = startYear; year <= endYear; year++) {
         events.forEach(function (eventDetail) {
-            var eventDate = year + '-' + eventDetail.day;
-            var dateObj = new Date(eventDate);
+            var dateParts = eventDetail.day.split('-');
+            var eventDate = new Date(year, parseInt(dateParts[0]) - 1, parseInt(dateParts[1])); // Ensure correct date parsing
             
-            if (!isNaN(dateObj.getTime())) { // Ensure valid date
-                var dayOfWeek = dateObj.toLocaleDateString('en-US', { weekday: 'long' });
+            if (!isNaN(eventDate.getTime())) { // Ensure valid date
+                var dayOfWeek = eventDate.toLocaleDateString('en-US', { weekday: 'long' });
                 var event = {
                     title: eventDetail.title + " (" + dayOfWeek + ")",
-                    start: eventDate,
+                    start: eventDate.toISOString().split('T')[0], // Ensure YYYY-MM-DD format
                     allDay: true
                 };
                 calendar.addEvent(event);
