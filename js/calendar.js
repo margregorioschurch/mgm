@@ -1229,14 +1229,17 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         // end of var events
     ];
-
-    for (var year = startYear; year <= endYear; year++) {
+    
+for (var year = startYear; year <= endYear; year++) {
         events.forEach(function(eventDetail) {
             var eventDate = year + '-' + eventDetail.day;
+            var dateObj = new Date(eventDate); // Create a Date object
+            var dayOfWeek = dateObj.toLocaleDateString('en-US', { weekday: 'long' }); // Get day of the week
+
             var event = {
-                title: eventDetail.title,
+                title: eventDetail.title + " (" + dayOfWeek + ")", // Add day of the week to title (optional)
                 start: eventDate,
-                allDay: true // Essential for all-day events!
+                allDay: true
             };
             calendar.addEvent(event);
         });
