@@ -1,27 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var calendarEl = document.getElementById('calendar');
+    const calendarEl = document.getElementById('calendar'); // Use const for elements
     if (!calendarEl) {
         console.error("Calendar element not found. Aborting calendar initialization.");
         return;
     }
 
-    // Function to calculate the first Sunday after Christmas
     function calculateFirstSundayAfterChristmas(year) {
-        var christmas = new Date(year, 11, 25); // December 25th
-        var dayOfWeek = christmas.getDay(); // 0 = Sunday, 6 = Saturday
-        var offset = (7 - dayOfWeek) % 7 || 7; // Ensure offset is at least 1 day
+        const christmas = new Date(year, 11, 25);
+        const dayOfWeek = christmas.getDay();
+        const offset = (7 - dayOfWeek) % 7 || 7;
         return new Date(christmas.getTime() + offset * 24 * 60 * 60 * 1000);
     }
 
-    // Get today's date
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
-    var yyyy = today.getFullYear();
-    var todayFormatted = `${yyyy}-${mm}-${dd}`;
+    const today = new Date();
+    const yyyy = today.getFullYear(); // Corrected variable name
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    const todayFormatted = `${yyyy}-${mm}-${dd}`; // Use yyyy here
 
-    // Initialize FullCalendar
-    var calendar = new FullCalendar.Calendar(calendarEl, {
+    const calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
         initialDate: todayFormatted,
         headerToolbar: {
@@ -29,15 +26,12 @@ document.addEventListener('DOMContentLoaded', function() {
             center: 'title',
             right: 'dayGridMonth,timeGridWeek,timeGridDay'
         },
-        events: [] // Start with an empty events array
+        events: []
     });
 
-    // Define the range of years to iterate over
-    var startYear = yyyy - 1; // Adjusted start year to 1 year before current year
-    var endYear = yyyy + 1;   // Extended end year to 1 year after current year
+    calendar.render();
 
-    // Define an array of event details
- var events = [
+const events = [
   // January
   { title: 'New Year', day: '01-01' },
   { title: 'Circumcision of our Lord, Feast of St Basil and St Gregory & All the Holy Fathers', day: '01-01' },
@@ -346,31 +340,23 @@ document.addEventListener('DOMContentLoaded', function() {
   // end of var events
 ];
 
-// Iterate through each year in the specified range
-    for (var year = startYear; year <= endYear; year++) {
-        events.forEach(function(eventDetail) {
-            // If the event is dynamic, calculate the date
+const startYear = yyyy - 1;
+    const endYear = yyyy + 1;
+
+    for (let year = startYear; year <= endYear; year++) { // Use let for loop counter
+        events.forEach(eventDetail => { // Use arrow function for conciseness
+            let event = {
+                title: eventDetail.title,
+                allDay: true // Good practice to explicitly set allDay
+            };
+
             if (eventDetail.dynamic && typeof eventDetail.calculate === 'function') {
-                var dynamicDate = eventDetail.calculate(year); // Get the dynamic date
-                var formattedDate = dynamicDate.toISOString().split('T')[0]; // Format to YYYY-MM-DD
-                // Add dynamic event to the calendar
-                calendar.addEvent({
-                    title: eventDetail.title,
-                    start: formattedDate,
-                    end: formattedDate
-                });
+                const dynamicDate = eventDetail.calculate(year);
+                event.start = dynamicDate.toISOString().split('T')[0];
             } else {
-                // Static events (non-dynamic)
-                var eventDate = `${year}-${eventDetail.day}`;
-                calendar.addEvent({
-                    title: eventDetail.title,
-                    start: eventDate,
-                    end: eventDate // All-day event
-                });
+                event.start = `${year}-${eventDetail.day}`;
             }
+            calendar.addEvent(event);
         });
     }
-
-    // Render the calendar with added events
-    calendar.render();
 });
