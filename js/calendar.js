@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Define the range of years to iterate over
-    var startYear = yyyy - 1; // Adjusted start year to 1 years before current year
-    var endYear = yyyy + 1; // Extended end year to 1 years after current year
+    var startYear = yyyy; // var startYear = yyyy - 1; Adjusted start year to 1 years before current year
+    var endYear = yyyy; // var endYear = yyyy + 1; Extended end year to 1 years after current year
 
     // Define an array of event details
     var events = [
