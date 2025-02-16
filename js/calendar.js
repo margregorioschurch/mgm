@@ -59,8 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
       { title: 'The end of Nineveh Lent. (Niram 6) Commemoration of Prophet Jonah. 93rd Commemoration of Patriarch Ignatius Elias III. (Manjinikkara Dayara).', day: '02-13' },
       { title: 'Commemoration of all the Departed Priests (Kohne Sunday). (Niram 7) 13th Commemoration of Sabha Ratnam H. G. Dr. Geevarghese Mar Osthathios Metropolitan. (St. Paul\'s Chapel, Mavelikkara).', day: '02-16' },
       { title: 'Commemoration of all the Departed Faithful (Anide Sunday). (Niram 8) 91st Feast of Malankara Sabha Bhasuran St. Geevarghese Mar Dionysius Metropolitan Vattasseril. (Old Seminary, Kottayam).', day: '02-23' },
-      { title: '17th Commemoration of H. G. Dr. Thomas Mar Makarios Metropolitan. (Catholicate Aramana, Devalokam). Feast of St. Policarpos of Smyrna.', day: '02-24' },
-      { title: 'Feast of St. Mathew the Evangelist.', day: '02-25' },
+      { title: '17th Commemoration of H. G. Dr. Thomas Mar Makarios Metropolitan. (Catholicate Aramana, Devalokam). Feast of St. Policarpos of Smyrna.', day: '02-23' },
+      { title: 'Feast of St. Mathew the Evangelist.', day: '02-24' },
       // March
       { title: 'First Sunday of Great Lent (Kothine Sunday). (Pethurtho of the Great Lent). (Niram 1)', day: '03-02' },
       { title: 'First Monday of the Great Lent. (Shubkono).', day: '03-03' },
@@ -235,27 +235,25 @@ document.addEventListener('DOMContentLoaded', function() {
       // "Can you convert the December events and their dates into a JavaScript array format?"
     ];
 
-// Iterate through each year in the specified range and add events to the calendar
-for (let year = startYear; year <= endYear; year++) {
-  events.forEach(({ title, day }) => {
-      let [month, date] = day.split('-').map(Number); // Extract month and day as numbers
-
-      let eventDate = new Date(year, month - 1, date);
-      
-      if (!isNaN(eventDate.getTime())) {
-          // let dayOfWeek = eventDate.toLocaleDateString('en-US', { weekday: 'long' });
-          calendar.addEvent({
-              title: `${title}`, // (${dayOfWeek})
-              start: eventDate.toISOString().split('T')[0],
-              allDay: true
-          });
-      } else {
-          console.error("Invalid date for event:", title, "on", day);
-      }
-  });
-}
-
-// Render the calendar with added events
-calendar.render();
-
+// Iterate through each year in the specified range
+for (var year = startYear; year <= endYear; year++) {
+    // Iterate through each event detail in the events array
+    events.forEach(function(eventDetail) {
+        // Construct the event date string using the current year and event day
+        var eventDate = year + '-' + eventDetail.day;
+  
+        // Create the event object with the specified title, start date, and end date (all-day event)
+        var event = {
+            title: eventDetail.title,
+            start: eventDate,
+            end: eventDate // All-day event ends on the same day
+        };
+  
+        // Add the event to the calendar
+        calendar.addEvent(event);
+    });
+  }
+  
+  // Render the calendar with added events
+  calendar.render();
 });
