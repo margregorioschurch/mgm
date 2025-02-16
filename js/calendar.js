@@ -45,10 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
       { title: '16th Commemoration of H.G. Philipose Mar Eusebius Metropolitan. (St. Basil Dayara, Pathanamthitta).', day: '01-21' },
       { title: '209th Commemoration of Marthoma VIII. (Puthencavu Cathedral).', day: '01-22' },
       { title: 'Commemoration of St. Augen the Monk.', day: '01-23' },
-      { title: 'Third Sunday after Epiphany. (Niram 5)', day: '01-26' },
-      { title: '19th Commemoration of H. H. Baselios Marthoma Mathews II Catholicos. (Mount Horeb Ashram, Sasthamcotta).', day: '01-26' },
-      { title: '71th Commemoration of H. G. Paulose Mar Athanasios Metropolitan, Kuttikkattil. Thrikkunnathu Seminary, Aluva.', day: '01-26' },
-      { title: 'Republic Day.', day: '01-26' },
+      { title: 'Third Sunday after Epiphany. (Niram 5) 71th Commemoration of H. G. Paulose Mar Athanasios Metropolitan, Kuttikkattil. Thrikkunnathu Seminary, Aluva.', day: '01-26' },
+      { title: '19th Commemoration of H. H. Baselios Marthoma Mathews II Catholicos. (Mount Horeb Ashram, Sasthamcotta). Republic Day.', day: '01-26' },
       // February
       { title: 'Fourth Sunday after Epiphany. (Niram 3) Mayaltho (Entry of our Lord into the Temple). (Niram 3) Commemoration of St. Simon and Hanna. (Elder’s Day). 57th Commemoration of H. G. Pathrose Mar Osthathios Metropolitan, Mookkancheril. (Carmel Dayara, Kandanadu)', day: '02-02' },
       { title: 'Feast of St. Bar Soumo - the Chief Among Mourners & Mar Kauma.', day: '02-03' },
