@@ -361,11 +361,8 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     max-width: 1100px;
     min-height: 430px;
     margin: 20px auto;
-    background: url(../img/World-Earth-PNG-Photos.png) no-repeat;
-    background-size: contain;
+    background: #fea11617;
     border-radius: 2px;
-    background-attachment: fixed;
-    background-position: center;
 }
 
 fc-view-harness fc-view-harness-active {
@@ -404,19 +401,16 @@ fc-view-harness fc-view-harness-active {
     font-size: 14px;
     line-height: 25px;
     text-align: start;
-    transition: 0.5s ease-in;
-    -moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
+    transition: color 0.3s ease-in; /* Smooth transition for color change */
+    /* Translate and animation setup */
     transform: translateX(100%);
-    -moz-animation: scroll-left 12s linear infinite !important;
-    -webkit-animation: scroll-left 12s linear infinite !important;
-    animation: scroll-left 12s linear infinite !important;
-    overflow: visible !important;
+    animation: scroll-left 12s linear infinite;
+    overflow: visible;
 }
 
 #calendar .fc-h-event .fc-event-title:hover {
-  animation-play-state: paused;
-    color:black;
+    animation-play-state: paused; /* Pause the animation on hover */
+    color: black; /* Change text color to black on hover */
 }
 
 @media screen and (max-width: 768px) {
@@ -437,7 +431,7 @@ fc-view-harness fc-view-harness-active {
 
 @-moz-keyframes scroll-left {
     0% {
-        -moz-transform: translateX(100%);
+        -moz-transform: translateX(20%);
     }
     100% {
         -moz-transform: translateX(-100%); /* Change this value based on your needs */
@@ -446,7 +440,7 @@ fc-view-harness fc-view-harness-active {
 
 @-webkit-keyframes scroll-left {
     0% {
-        -webkit-transform: translateX(100%);
+        -webkit-transform: translateX(20%);
     }
     100% {
         -webkit-transform: translateX(-100%); /* Change this value based on your needs */
