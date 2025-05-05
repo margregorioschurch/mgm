@@ -108,3 +108,83 @@
     viewVisitCount();
 
 }(jQuery);
+// Generate Cookies and cookie consent
+function generateSessionID() {
+    return 'mgm-' + Math.random().toString(36).substring(2, 15);
+  }
+  
+  function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));  // Expiration in days
+    const expires = "expires=" + d.toUTCString();
+    // SameSite=None if cross-origin requests are involved, and use SameSite=Secure if not using HTTPS on localhost
+    document.cookie = name + "=" + encodeURIComponent(value) + ";" + expires + ";path=/; SameSite=None;";
+  }
+  
+  function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) == 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+    }
+    return null;
+  }
+  
+  const userAgent = navigator.userAgent;
+  setCookie('userAgent', userAgent, 1);  // Store user agent in cookie for 1 day
+  
+  let sessionID = getCookie('sessionID');
+  if (!sessionID) {
+    sessionID = generateSessionID();
+    setCookie('sessionID', sessionID, 1);  // Store session ID in cookie for 1 day
+  }
+  
+  const el = document.getElementById('cookieConsent');
+  if (el) {
+    console.log("Session Token:" + sessionID);
+  };
+  
+    // Function to get a cookie value by name
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+      return null;
+    }
+
+    // Function to set a cookie
+    function setCookie(name, value, days) {
+      const d = new Date();
+      d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+      document.cookie = `${name}=${value}; expires=${d.toUTCString()}; path=/`;
+    }
+
+    // Function to show the cookie consent banner
+    function showCookieConsent() {
+      const consent = getCookie('cookieConsent');
+      if (!consent) {
+        document.getElementById('cookieConsent').classList.remove('d-none');
+      }
+    }
+
+    // Function to hide the cookie consent banner
+    function hideCookieConsent() {
+      document.getElementById('cookieConsent').classList.add('d-none');
+    }
+
+    // Event listener for accepting cookies
+    document.getElementById('acceptCookies').addEventListener('click', function() {
+      setCookie('cookieConsent', 'accepted', 30);  // Set cookie for 30 days
+      hideCookieConsent();  // Hide the banner
+    });
+
+    // Event listener for denying cookies
+    document.getElementById('denyCookies').addEventListener('click', function() {
+      setCookie('cookieConsent', 'denied', 30);  // Set cookie for 30 days
+      hideCookieConsent();  // Hide the banner
+    });
+
+    // Show the consent banner on page
+    showCookieConsent();
