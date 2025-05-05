@@ -93,19 +93,19 @@
     });
 
     // Fetch and display visit count (this part was commented out in your original code)
-    const countEll = document.getElementById("CounterVisitorNo");
+    // const countEll = document.getElementById("CounterVisitorNo");
 
-    function viewVisitCount() {
-        fetch("https://api.countapi.xyz/get/mgm/visits/")
-            .then(o => o.json())
-            .then(o => {
-                countEll.innerHTML = o.value;
-            })
-            .catch(err => console.error("Error fetching visit count:", err));
-    }
+    // function viewVisitCount() {
+    //     fetch("https://api.countapi.xyz/get/mgm/visits/")
+    //         .then(o => o.json())
+    //         .then(o => {
+    //             countEll.innerHTML = o.value;
+    //         })
+    //         .catch(err => console.error("Error fetching visit count:", err));
+    // }
 
     // Call the viewVisitCount function to display the current visit count
-    viewVisitCount();
+    // viewVisitCount();
 
 }(jQuery);
 // Generate Cookies and cookie consent
@@ -133,19 +133,50 @@ function generateSessionID() {
   }
   
   const userAgent = navigator.userAgent;
-  setCookie('userAgent', userAgent, 1);  // Store user agent in cookie for 1 day
+  setCookie('userAgent',encodeURIComponent(userAgent), 1);  // 1 day cookie
   
   let sessionID = getCookie('sessionID');
   if (!sessionID) {
     sessionID = generateSessionID();
-    setCookie('sessionID', sessionID, 1);  // Store session ID in cookie for 1 day
+    setCookie('sessionID', sessionID, 1);
   }
   
-  const el = document.getElementById('cookieConsent');
-  if (el) {
-    console.log("Session Token:" + sessionID);
-  };
-  
+  // Retrieve and decode the user agent
+  const xxx = decodeURIComponent(getCookie('userAgent')).toLowerCase();
+
+  // OS/Device detection using userAgent
+  if (xxx.includes('windows')) {
+    console.log('User is on Windows PC');
+  } else if (xxx.includes('macintosh') || xxx.includes('mac os') || xxx.includes('iphone') || xxx.includes('ipad')) {
+    console.log('User is on Apple device');
+  } else if (xxx.includes('android')) {
+    console.log('User is on Android device');
+  } else if (xxx.includes('linux')) {
+    console.log('User is on Linux machine');
+  } else if (xxx.includes('tablet')) {
+    console.log('User is on a Tablet');
+  } else {
+    console.log('Device/OS could not be determined');
+  }
+
+  //Enhanced client hints detection if supported
+  if (navigator.userAgentData && navigator.userAgentData.getHighEntropyValues) {
+    navigator.userAgentData.getHighEntropyValues([
+      "platform", "platformVersion", "architecture", "model", "uaFullVersion"
+    ]).then(uaData => {
+      console.log('High Entropy UA Data:', uaData);
+      // Example: log device model or platform
+      if (uaData.platform) {
+        console.log('Platform:', uaData.platform);
+      }
+      if (uaData.model) {
+        console.log('Device model:', uaData.model);
+      }
+    }).catch(err => {
+      console.warn('Could not retrieve high entropy UA data:', err);
+    });
+  }
+
     // Function to get a cookie value by name
     function getCookie(name) {
       const value = `; ${document.cookie}`;
@@ -176,13 +207,13 @@ function generateSessionID() {
 
     // Event listener for accepting cookies
     document.getElementById('acceptCookies').addEventListener('click', function() {
-      setCookie('cookieConsent', 'accepted', 30);  // Set cookie for 30 days
+      setCookie('cookieConsent', 'accepted', 30); // 30 days
       hideCookieConsent();  // Hide the banner
     });
 
     // Event listener for denying cookies
     document.getElementById('denyCookies').addEventListener('click', function() {
-      setCookie('cookieConsent', 'denied', 30);  // Set cookie for 30 days
+      setCookie('cookieConsent', 'denied', 30);
       hideCookieConsent();  // Hide the banner
     });
 
