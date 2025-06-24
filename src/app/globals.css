@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #252525;
+}
+
+[data-theme='dark'] {
+  --background: #0c0401;
+  --foreground: #ededed;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.fc-event-title-container {
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+}
+
+.fc-event-title-container:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(10%); }
+  100% { transform: translateX(-100%); }
+}
+
+.fc-h-event .fc-event-title-container{
+  min-width: auto !important;
+}
+
+#calendar .fc-h-event .fc-event-main-frame{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#page-quotes{
+  background: url('/img/calvary-mountain-sunset-background-vector.webp');
+  background-position: center;
+  background-size: cover;
+}
