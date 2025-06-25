@@ -28,7 +28,7 @@ export default function Page() {
           
           {/* Text Content */}
           <div className="lg:w-1/2 text-center lg:text-left">
-            <h1 className="text-5xl lg:text-6xl font-bold text-white animate-slide-in-left mb-6">
+            <h1 className="text-5xl lg:text-6xl font-bold text-white animate-slide-in-left mb-6 py-20">
               Mar.Gregorios<br />Orthodox Church
             </h1>
             <p className="text-lg text-gray-300 animate-slide-in-left mb-6 pb-2">
