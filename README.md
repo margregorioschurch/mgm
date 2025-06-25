@@ -1,4 +1,4 @@
-This is a [mgm-next.js]([https://nextjs.org](https://margregorios-git-3fe838-mar-gregorios-orthodox-churchs-projects.vercel.app/)) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [mgm-next.js]([https://nextjs.org](https://margregorios-git-3fe838-mar-gregorios-orthodox-churchs-projects.vercel.app/) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
