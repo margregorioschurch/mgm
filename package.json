@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "next build && next export",
+    "gh-build": "GITHUB_PAGES=true npm run build",  
     "start": "next start",
     "export": "next export",
     "deploy": "npm run build && gh-pages -d out",
