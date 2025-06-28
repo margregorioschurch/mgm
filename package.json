@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build && next export",
-    "gh-build": "GITHUB_PAGES=true npm run build",  
+    "gh-build": "cross-env GITHUB_PAGES=true npm run build",
     "start": "next start",
     "export": "next export",
-    "deploy": "npm run build && gh-pages -d out",
+    "deploy": "npm run gh-build && gh-pages -d out",
     "lint": "next lint"
   },
   "dependencies": {
