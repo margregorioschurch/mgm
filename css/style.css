@@ -7,6 +7,7 @@
     --dark: #1b1b1b;
     --menu: #000000d1;
     --verse: #ffffff;
+    --gray: #666666;
     --brown: #bc451d;
     --black: #202020;
     --text-light: #ffffff; /* Light text color */
@@ -361,8 +362,9 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
     max-width: 1100px;
     min-height: 430px;
     margin: 20px auto;
-    background: #fea11617;
-    border-radius: 2px;
+    /*background: #fea11617;*/
+    border-radius: 5px;
+    border: 1px solid #dddddd;
 }
 
 fc-view-harness fc-view-harness-active {
@@ -377,9 +379,9 @@ fc-view-harness fc-view-harness-active {
 }
 
 #calendar a {
-    color:var(--text-dark) !important;
+    color:var(--gray) !important;
     font-size: large;
-    font-weight: 700;
+    /*font-weight: 700;*/
 }
 
 #calendar button {
