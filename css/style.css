@@ -361,7 +361,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 #calendar {
     max-width: 1100px;
     min-height: 430px;
-    margin: 20px auto;
+    margin: 0px auto;
     /*background: #fea11617;*/
     border-radius: 5px;
     border: 1px solid #dddddd;
@@ -369,6 +369,10 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 
 fc-view-harness fc-view-harness-active {
     background: #b7d6de9e;
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+    margin-top: 1rem;
 }
 
 #calendar h2 {
@@ -459,8 +463,8 @@ fc-view-harness fc-view-harness-active {
 }
 
 .fc .fc-daygrid-day.fc-day-today {
-    background-color: #fea116b8 !important;
-    box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.1);
+    background-color: #ffbc57e3 !important;
+    box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 #btn-center{

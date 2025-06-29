@@ -213,7 +213,7 @@ function generateSessionID() {
 
     // Event listener for denying cookies
     document.getElementById('denyCookies').addEventListener('click', function() {
-      setCookie('cookieConsent', 'denied', 30);
+      setCookie('cookieConsent', 'denied', 7);
       hideCookieConsent();  // Hide the banner
     });
 

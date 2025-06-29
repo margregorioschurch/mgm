@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loadAllQuotesWithDelay();
 
     // Reload quotes on button click with delay
-    document.querySelectorAll("button").forEach(button => {
+    document.querySelectorAll(".owl-prev, .owl-next").forEach(button => {
         button.addEventListener("click", loadAllQuotesWithDelay);
     });
 });
