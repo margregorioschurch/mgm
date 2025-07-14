@@ -40,13 +40,15 @@
     <br />
     <a href="https://margregorioschurch.github.io/mgm/"><strong>Website Link 1 (Github) »</strong></a>
     <br />
-    <a href="https://margregorioschurch.vercel.app/"><strong>Website link 2 (Vercel)»</strong></a>
+    <a href="https://margregorioschurch.vercel.app/"><strong>Website link 2 (Vercel) »</strong></a>
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://margregorioschurch-2mluhgqbg.vercel.app/"><strong>NextJs Preview link (Github Branch) »</strong></a>
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template">View Template Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Template Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Template Feature</a>
   </p>
 </div>
 
@@ -85,7 +87,7 @@
 
 [![Product Screen Shot][product-screenshot]](https://raw.githubusercontent.com/margregorioschurch/mgm/master/screenshot.png)
 
-<img src="https://raw.githubusercontent.com/margregorioschurch/mgm/master/screenshot.png" alt="Logo" width="100%" height="100%">
+<img src="https://raw.githubusercontent.com/margregorioschurch/mgm/master/screenshot.png" alt="Logo" width="100%" height="400px">
 
 There are many great webite templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it! [Follow creator](https://github.com/othneildrew/).
 
@@ -177,6 +179,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
     - [ ] Chinese
     - [ ] Spanish
     - [ ] Malayalam
+    - [x] English
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
