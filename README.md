@@ -1,4 +1,4 @@
-## The project is hosted in [mgm-next.js](https://margregorios-git-3fe838-mar-gregorios-orthodox-churchs-projects.vercel.app/) bootstrapped with [`create-next-app`]()(https://nextjs.org/docs/app/api-reference/cli/create-next-app). Github pages are hosted at [gh-pages](https://margregorioschurch-2mluhgqbg.vercel.app/).
+## The project is hosted in [mgm-next.js](https://margregorios-git-3fe838-mar-gregorios-orthodox-churchs-projects.vercel.app/) bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). Github pages are hosted at [gh-pages](https://margregorioschurch-2mluhgqbg.vercel.app/).
 
 ## Getting Started
 
