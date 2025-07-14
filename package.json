@@ -1,15 +1,15 @@
 {
-  "homepage": "https://margregorioschurch.github.io/mgm/nextjs/",
+  "homepage": "https://margregorioschurch.github.io/mgm/",
   "name": "mgm-nextjs",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build && next export",
     "gh-build": "cross-env GITHUB_PAGES=true npm run build",
     "start": "next start",
     "export": "next export",
-    "deploy": "npm run gh-build && gh-pages -d out",
+    "deploy": "npm run build && gh-pages -d out",
     "lint": "next lint"
   },
   "dependencies": {
