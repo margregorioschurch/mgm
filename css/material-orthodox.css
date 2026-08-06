@@ -1,0 +1,117 @@
+/* Custom Material Design Styles with Square Edges (Orthodox Theme) */
+
+/* Core variables */
+:root {
+  --primary-color: #bc451d;
+  --ortho-shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  --ortho-shadow-md: 0 4px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  --ortho-shadow-lg: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  --transition-speed: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Card Hover Effect */
+.ortho-card-hover {
+  transition: box-shadow var(--transition-speed), transform var(--transition-speed);
+  border: 1px solid transparent !important;
+}
+
+.ortho-card-hover:hover {
+  box-shadow: var(--ortho-shadow-md) !important;
+  transform: translateY(-4px);
+  border-bottom: 3px solid var(--primary-color) !important;
+}
+
+/* Button Hover Effect */
+.ortho-btn-hover {
+  transition: box-shadow var(--transition-speed), transform var(--transition-speed), background-color var(--transition-speed);
+  box-shadow: var(--ortho-shadow-sm);
+  border-radius: 0 !important;
+}
+
+.ortho-btn-hover:hover {
+  box-shadow: var(--ortho-shadow-md);
+  transform: translateY(-2px);
+}
+
+.ortho-btn-hover:active {
+  box-shadow: var(--ortho-shadow-sm);
+  transform: translateY(0);
+}
+
+/* Square Imagery */
+.ortho-img-square {
+  border-radius: 0 !important;
+  box-shadow: var(--ortho-shadow-sm);
+  transition: box-shadow var(--transition-speed);
+}
+
+.ortho-img-square:hover {
+  box-shadow: var(--ortho-shadow-lg);
+}
+
+/* Form Input Focus */
+.ortho-form-input .form-control {
+  border-radius: 0 !important;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  box-shadow: none !important;
+  background-color: #f8f9fa;
+  transition: border-bottom-color 0.2s, background-color 0.2s;
+}
+
+.ortho-form-input .form-control:focus {
+  border-bottom: 2px solid var(--primary-color);
+  background-color: #ffffff;
+}
+
+/* Global enforce rounded-0 where needed */
+.ortho-square {
+  border-radius: 0 !important;
+}
+
+/* Scrollable Navigation Tabs (Mobile) */
+.ortho-nav-scroll {
+  flex-wrap: nowrap !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  justify-content: flex-start !important;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: auto;
+}
+
+.ortho-nav-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+.ortho-nav-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.ortho-nav-scroll::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .ortho-nav-scroll {
+    justify-content: center !important;
+    overflow-x: visible;
+  }
+  .ortho-nav-scroll::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Carousel Buttons Hover Effect */
+.ortho-scroll-btn {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.ortho-tab-carousel:hover .ortho-scroll-btn,
+.ortho-tab-carousel:active .ortho-scroll-btn,
+.ortho-tab-carousel:focus-within .ortho-scroll-btn {
+  opacity: 1;
+  pointer-events: auto;
+}

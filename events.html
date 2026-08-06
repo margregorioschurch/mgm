@@ -33,6 +33,7 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 	<link href="css/style1.css" rel="stylesheet">
+    <link href="css/material-orthodox.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
     $(document).ready(function() {
@@ -85,7 +86,7 @@
                         <!-- </div> -->
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="tel:0469 2668858" class="btn btn-primary py-2 px-4"><i class="fa fa-phone"></i> 0469-2668858</a>
+                    <a href="tel:0469 2668858" class="btn btn-primary py-2 px-4 ortho-square ortho-btn-hover"><i class="fa fa-phone"></i> 0469-2668858</a>
                 </div>
             </nav>
 
@@ -130,39 +131,55 @@
                 </div>
                 <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h1 class="mb-5 mt-3">Events</h1>
-                    <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
-			<br>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 pb-3 active" data-bs-toggle="pill" href="#tab-1">
-				<i class="fa fa-angle-left fa-2x text-primary"></i>&nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-book fa-2x text-primary"></i>
-                                <div class="ps-3 text-center">
-                                    <small class="text-body">Present</small>
-                                    <h6 class="mt-n1 mb-0">Scripture Readings</h6>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3" data-bs-toggle="pill" href="#tab-2">
-				    <i class="fa fa-calendar-check fa-2x text-primary"></i>
-                                <div class="ps-3 text-center">
-                                    <small class="text-body">Upcoming</small>
-                                    <h6 class="mt-n1 mb-0">Events</h6>
-                                </div>
-                            </a>
-                        </li>
+                    <!-- Tab Menu with Carousel Buttons -->
+                    <div class="position-relative mb-5 ortho-tab-carousel">
+                        <button class="btn btn-primary ortho-square position-absolute top-50 start-0 translate-middle-y d-md-none shadow-sm ortho-scroll-btn ortho-square ortho-btn-hover" style="z-index: 10; padding: 10px 15px;" onclick="scrollTabs(-150)">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
                         
-                        <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
-                                <i class="fa fa-check fa-2x text-primary"></i>
-                                <div class="ps-3 text-center">
-                                    <small class="text-body">Add</small>
-                                    <h6 class="mt-n1 mb-0">Events</h6>
-                                </div>&nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-angle-right fa-2x text-primary"></i>
-                            </a>
-                        </li>
-                    </ul>
+                        <ul class="nav nav-pills d-flex ortho-nav-scroll border-bottom m-0 px-5 px-md-0" id="eventsTabContainer" style="scroll-behavior: smooth;">
+                            <li class="nav-item flex-shrink-0">
+                                <a class="d-flex align-items-center text-start mx-2 mx-md-3 pb-3 active" data-bs-toggle="pill" href="#tab-1" style="white-space: nowrap;">
+                                    <i class="fa fa-angle-left fa-2x text-primary d-none d-md-block"></i><span class="d-none d-md-block">&nbsp;&nbsp;&nbsp;</span>
+                                    <i class="fa fa-book fa-2x text-primary"></i>
+                                    <div class="ps-3 pe-2 text-center">
+                                        <small class="text-body">Present</small>
+                                        <h6 class="mt-n1 mb-0">Scripture Readings</h6>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item flex-shrink-0">
+                                <a class="d-flex align-items-center text-start mx-2 mx-md-3 pb-3" data-bs-toggle="pill" href="#tab-2" style="white-space: nowrap;">
+                                    <i class="fa fa-calendar-check fa-2x text-primary"></i>
+                                    <div class="ps-3 pe-2 text-center">
+                                        <small class="text-body">Upcoming</small>
+                                        <h6 class="mt-n1 mb-0">Events</h6>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item flex-shrink-0">
+                                <a class="d-flex align-items-center text-start mx-2 mx-md-3 pb-3" data-bs-toggle="pill" href="#tab-3" style="white-space: nowrap;">
+                                    <i class="fa fa-check fa-2x text-primary"></i>
+                                    <div class="ps-3 pe-2 text-center">
+                                        <small class="text-body">Add</small>
+                                        <h6 class="mt-n1 mb-0">Events</h6>
+                                    </div><span class="d-none d-md-block">&nbsp;&nbsp;&nbsp;</span>
+                                    <i class="fa fa-angle-right fa-2x text-primary d-none d-md-block"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <button class="btn btn-primary ortho-square position-absolute top-50 end-0 translate-middle-y d-md-none shadow-sm ortho-scroll-btn ortho-square ortho-btn-hover" style="z-index: 10; padding: 10px 15px;" onclick="scrollTabs(150)">
+                            <i class="fa fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <script>
+                        function scrollTabs(amount) {
+                            var container = document.getElementById('eventsTabContainer');
+                            container.scrollLeft += amount;
+                        }
+                    </script>
                     <div class="tab-content">
 
 			<div id="tab-1" class="tab-pane fade show p-0 active">
@@ -178,7 +195,7 @@
                             <div class="row g-4">
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/1427965.png" alt="" style="width: 50px;">
+                                        <img class="flex-shrink-0 img-fluid rounded-0 ortho-square" src="img/1427965.png" alt="" style="width: 50px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span id="event-name">Baptism of Jesus</span>
@@ -190,7 +207,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/1427965.png" alt="" style="width: 50px;">
+                                        <img class="flex-shrink-0 img-fluid rounded-0 ortho-square" src="img/1427965.png" alt="" style="width: 50px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Presentation of Jesus at the Temple</span>
@@ -202,7 +219,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/1427965.png" alt="" style="width: 50px;">
+                                        <img class="flex-shrink-0 img-fluid rounded-0 ortho-square" src="img/1427965.png" alt="" style="width: 50px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Palm Sunday</span>
@@ -214,7 +231,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/1427965.png" alt="" style="width: 50px;">
+                                        <img class="flex-shrink-0 img-fluid rounded-0 ortho-square" src="img/1427965.png" alt="" style="width: 50px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Easter</span>
@@ -226,7 +243,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/1427965.png" alt="" style="width: 50px;">
+                                        <img class="flex-shrink-0 img-fluid rounded-0 ortho-square" src="img/1427965.png" alt="" style="width: 50px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Pentecost</span>
@@ -238,7 +255,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/1427965.png" alt="" style="width: 50px;">
+                                        <img class="flex-shrink-0 img-fluid rounded-0 ortho-square" src="img/1427965.png" alt="" style="width: 50px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Transfiguration of Jesus</span>
@@ -250,7 +267,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/1427965.png" alt="" style="width: 50px;">
+                                        <img class="flex-shrink-0 img-fluid rounded-0 ortho-square" src="img/1427965.png" alt="" style="width: 50px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Feasts of the Cross</span>
@@ -262,7 +279,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="d-flex align-items-center">
-                                        <img class="flex-shrink-0 img-fluid rounded" src="img/1427965.png" alt="" style="width: 50px;">
+                                        <img class="flex-shrink-0 img-fluid rounded-0 ortho-square" src="img/1427965.png" alt="" style="width: 50px;">
                                         <div class="w-100 d-flex flex-column text-start ps-4">
                                             <h5 class="d-flex justify-content-between border-bottom pb-2">
                                                 <span>Christmas</span>
@@ -285,7 +302,7 @@
                                           <div class="todo-inner">
                                             <div class="col-12">
                                               <div class="col-12 py-3">
-                                                <input type="text" class="form-control" placeholder="Type event name" id="addtaskinput" />
+                                                <input type="text" class="form-control ortho-square" placeholder="Type event name" id="addtaskinput" />
                                                 <input type="hidden" id="saveindex">
                                               </div>
                                               <button type="button" class="btn btn-success mr-sm-2 px-2" id="addtaskbtn" style="color: var(--light);font-size: small;">
@@ -324,7 +341,7 @@
         <div id='calendar' class="row col-xl-auto mt-3 p-1"></div>
         <br>
         <div class="col-md-12 text-center">
-        <a id="btn-center" class="btn-primary py-1 px-3 mb-5" href="https://mosc.in/uploads/2023/12/Panjangom2025_Online.pdf" target="_blank" rel="noopener"><i class="fa fa-download"></i> Download Calendar</a>   
+        <a id="btn-center" class="btn-primary py-1 px-3 mb-5 ortho-square ortho-btn-hover" href="https://mosc.in/uploads/2023/12/Panjangom2025_Online.pdf" target="_blank" rel="noopener"><i class="fa fa-download"></i> Download Calendar</a>   
         </div>
         <br>
         <br>
@@ -367,8 +384,8 @@
                         <p>Subscribe to know the latest news.</p>
                         <div class="position-relative mx-auto" style="max-width: 400px;">
                             <form id="myform">
-                            <input class="form-control border-primary w-100 py-3 ps-4 pe-5" name="email" type="text" placeholder="Your email" required>
-                            <input type="submit" id="submitForm" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"></input>
+                            <input class="form-control ortho-square border-primary w-100 py-3 ps-4 pe-5" name="email" type="text" placeholder="Your email" required>
+                            <input type="submit" id="submitForm" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2 ortho-square ortho-btn-hover"></input>
                             </form>
                         </div>
                     </div>
@@ -414,7 +431,7 @@
         <!--END Counter-->
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" title="back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top ortho-square ortho-btn-hover" title="back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->
